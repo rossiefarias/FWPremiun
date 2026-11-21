@@ -727,6 +727,33 @@
         .footer-social-whatsapp { background: #177A4C; }
         .footer-social-instagram { background: #A51D61; }
         .footer-social-tiktok { background: #101820; }
+        .floating-whatsapp {
+            position: fixed;
+            right: max(1rem, env(safe-area-inset-right));
+            bottom: max(1rem, env(safe-area-inset-bottom));
+            z-index: 45;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #4ED85D 0%, #19B83C 100%);
+            color: #FFFDF6;
+            box-shadow: 0 8px 24px rgba(20, 68, 44, .35);
+            transition: transform .2s ease, background-color .2s ease;
+        }
+        .floating-whatsapp i { font-size: 2rem; line-height: 1; }
+        .floating-whatsapp:hover { transform: translateY(-3px); background: linear-gradient(180deg, #43CF53 0%, #13AC34 100%); }
+        .floating-whatsapp:focus-visible { outline: 3px solid #713D79; outline-offset: 4px; }
+        @media (max-width: 639px) {
+            .floating-whatsapp {
+                right: max(.75rem, env(safe-area-inset-right));
+                bottom: max(.75rem, env(safe-area-inset-bottom));
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+        }
         @keyframes detailProductFloat {
             0%, 100% { transform: translateY(0) rotate(-.45deg); }
             50% { transform: translateY(-10px) rotate(.55deg); }
@@ -1093,7 +1120,7 @@
                     </div>
                     <span class="catalog-card-symbol" aria-hidden="true">+</span>
                     <div class="catalog-card-benefits">
-                        <strong>Beneficios clave</strong>
+                        <strong>Beneficios claves</strong>
                         <ul>
                             <li><i class="fa-solid fa-circle-check"></i><span>Salud de piel, uñas y cabello</span></li>
                             <li><i class="fa-solid fa-circle-check"></i><span>Fortalece el sistema inmunológico</span></li>
@@ -1115,7 +1142,7 @@
                     </div>
                     <span class="catalog-card-symbol" aria-hidden="true">↗</span>
                     <div class="catalog-card-benefits">
-                        <strong>Beneficios clave</strong>
+                        <strong>Beneficios claves</strong>
                         <ul>
                             <li><i class="fa-solid fa-circle-check"></i><span>Acelera tu metabolismo</span></li>
                             <li><i class="fa-solid fa-circle-check"></i><span>Aumenta la saciedad para el control de peso</span></li>
@@ -1137,7 +1164,7 @@
                     </div>
                     <span class="catalog-card-symbol" aria-hidden="true">✳</span>
                     <div class="catalog-card-benefits">
-                        <strong>Beneficios clave</strong>
+                        <strong>Beneficios claves</strong>
                         <ul>
                             <li><i class="fa-solid fa-circle-check"></i><span>Energía saludable y concentración</span></li>
                             <li><i class="fa-solid fa-circle-check"></i><span>Ayuda a disminuir la fatiga y el cansancio mental</span></li>
@@ -1159,7 +1186,7 @@
                     </div>
                     <span class="catalog-card-symbol" aria-hidden="true">∿</span>
                     <div class="catalog-card-benefits">
-                        <strong>Beneficios clave</strong>
+                        <strong>Beneficios claves</strong>
                         <ul>
                             <li><i class="fa-solid fa-circle-check"></i><span>Limpieza interna y detox natural</span></li>
                             <li><i class="fa-solid fa-circle-check"></i><span>Probióticos para la flora intestinal</span></li>
@@ -1181,7 +1208,7 @@
                     </div>
                     <span class="catalog-card-symbol" aria-hidden="true">+</span>
                     <div class="catalog-card-benefits">
-                        <strong>Beneficios clave</strong>
+                        <strong>Beneficios claves</strong>
                         <ul>
                             <li><i class="fa-solid fa-circle-check"></i><span>Optimiza la oxidación de grasas</span></li>
                             <li><i class="fa-solid fa-circle-check"></i><span>Acelera la recuperación muscular</span></li>
@@ -2074,8 +2101,8 @@
                         </li>
                     </ol>
 
-                    <p class="mt-6 text-center text-base sm:text-lg leading-relaxed font-bold text-[#33411B]">
-                        ✨ ¡Así de fácil! Tú eliges los productos y armas tu pack según tus necesidades.
+                    <p class="mt-6 text-center text-sm sm:text-base leading-relaxed font-normal text-[#385647]">
+                        ¡Así de fácil! Tú eliges los productos y armas tu pack según tus necesidades.
                     </p>
                     <a href="https://wa.me/56996923156?text=Hola%20Rossie%2C%20quiero%20armar%20un%20pack%20mayorista%20y%20necesito%20asesor%C3%ADa%20para%20elegir%20los%20productos." target="_blank" rel="noopener noreferrer" class="pack-advice-link mt-6 mx-auto px-5 py-4 rounded-2xl border-2 border-[#7A354F] text-[#4D263B] bg-[#FCEAF2] font-bold text-sm sm:text-base flex items-center justify-center gap-3 text-center max-w-md" aria-label="Pedir asesoría por WhatsApp para elegir productos del pack mayorista">
                         <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
@@ -2090,7 +2117,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="hero-title pack-title text-center mb-5">Emprende con FWP</h2>
             <p class="text-[#385647] text-base sm:text-xl leading-relaxed text-center max-w-3xl mx-auto mb-9 sm:mb-12">
-                Una oportunidad real para generar ingresos extra, desde tu celular, a tu ritmo, sin dejar lo que ya tienes.
+                Descubre cómo generar ingresos extra desde tu celular, a tu ritmo y sin dejar de lado lo que hoy ya haces.
             </p>
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 lg:gap-7 mb-14 sm:mb-20">
@@ -2104,15 +2131,15 @@
                 <article class="venture-card">
                     <img class="venture-photo" src="emprende-ingreso-rva-hd.png" width="1122" height="1402" alt="Preparación de una bebida con el sachet RVA+ original" loading="lazy" decoding="async">
                     <div class="p-5 sm:p-4 lg:p-5">
-                        <h3 class="font-heading text-lg font-extrabold text-[#203B2E] leading-tight mb-2">Te gustaría generar un ingreso extra</h3>
-                        <p class="text-sm sm:text-base text-[#52684C] leading-relaxed">Para tus metas, tus cuentas o simplemente darte más tranquilidad.</p>
+                        <h3 class="font-heading text-lg font-extrabold text-[#203B2E] leading-tight mb-2">¿Te gustaría generar ingresos extra?</h3>
+                        <p class="text-sm sm:text-base text-[#52684C] leading-relaxed">Para cumplir tus metas, aliviar tus gastos y disfrutar de una mayor tranquilidad económica.</p>
                     </div>
                 </article>
                 <article class="venture-card">
                     <img class="venture-photo" src="emprende-tiempo-hd.png" width="1122" height="1402" alt="Madre e hija compartiendo tiempo frente a un computador" loading="lazy" decoding="async">
                     <div class="p-5 sm:p-4 lg:p-5">
-                        <h3 class="font-heading text-lg font-extrabold text-[#203B2E] leading-tight mb-2">Quieres más tiempo para lo que importa</h3>
-                        <p class="text-sm sm:text-base text-[#52684C] leading-relaxed">Tu familia, tus proyectos y tu bienestar.</p>
+                        <h3 class="font-heading text-lg font-extrabold text-[#203B2E] leading-tight mb-2">¿Quieres más tiempo para lo que realmente importa?</h3>
+                        <p class="text-sm sm:text-base text-[#52684C] leading-relaxed">Para disfrutar de tu familia, avanzar en tus proyectos y cuidar de tu bienestar.</p>
                     </div>
                 </article>
             </div>
@@ -2129,7 +2156,7 @@
 
                 <h3 class="font-heading text-2xl sm:text-3xl font-extrabold text-[#203B2E] mt-12 mb-4">¿Ya viste el video? Ahora viene lo mejor.</h3>
                 <p class="text-base sm:text-lg font-semibold text-[#385647] leading-relaxed max-w-3xl mx-auto mb-7">
-                    No tienes que descubrir cómo empezar por tu cuenta. Te acompañamos para que conozcas los pasos, resuelvas tus dudas y decidas si esta oportunidad es para ti.
+                    Comienza con la confianza de contar con nuestro apoyo desde el primer día. Te acompañamos paso a paso, resolvemos tus dudas y te ayudamos a descubrir cómo aprovechar esta oportunidad a tu propio ritmo.
                 </p>
                 <a href="https://wa.me/56996923156?text=Hola%20Rossie%2C%20ya%20vi%20el%20video%20de%20Emprende%20con%20FWP%20y%20quiero%20saber%20m%C3%A1s%20detalles." target="_blank" rel="noopener noreferrer" class="venture-cta inline-flex items-center justify-center gap-3 min-h-14 px-6 py-4 rounded-2xl bg-[#B70E61] hover:bg-[#94104F] font-black text-sm sm:text-base text-center shadow-lg shadow-[#B70E61]/25 transition-colors">
                     <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
@@ -2254,6 +2281,10 @@
             </div>
         </div>
     </footer>
+
+    <a class="floating-whatsapp" href="https://wa.me/56996923156?text=Hola%20Rossie%2C%20tengo%20una%20consulta%20sobre%20los%20productos%20FWP." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp con Rossie Farías" title="Consultar por WhatsApp">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <div id="buy-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-[#203B2E]/78 backdrop-blur-sm p-4">
         <div class="glass-panel max-w-md w-full p-6 rounded-3xl border border-gray-700 shadow-2xl relative">
