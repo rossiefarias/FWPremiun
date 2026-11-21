@@ -22,19 +22,74 @@
             theme: {
                 extend: {
                     colors: {
+                        white: '#203B2E',
+                        gray: {
+                            50: '#203B2E', 100: '#294638', 200: '#304E3F',
+                            300: '#385647', 400: '#52684C', 500: '#6C815E',
+                            600: '#8FA084', 700: '#B7C3AD', 800: '#D0D6C4',
+                            900: '#E9EEDB', 950: '#F7F5EC'
+                        },
+                        pink: {
+                            50: '#FFF8FB', 100: '#FCEAF2', 200: '#F7D7E5',
+                            300: '#8B405F', 400: '#7A354F', 500: '#F0B6CF',
+                            600: '#DB97B5', 700: '#A85D7F', 800: '#F4D2E1',
+                            900: '#F7DDE8', 950: '#FAE8F0'
+                        },
+                        rose: {
+                            50: '#FFF8FB', 100: '#FCEAF2', 200: '#F7D7E5',
+                            300: '#8B405F', 400: '#7A354F', 500: '#F0B6CF',
+                            600: '#DB97B5', 700: '#A85D7F', 800: '#F4D2E1',
+                            900: '#F7DDE8', 950: '#FAE8F0'
+                        },
+                        lime: {
+                            50: '#FBFFF1', 100: '#F5FFD8', 200: '#ECFFAE',
+                            300: '#5D742E', 400: '#506629', 500: '#D9F878',
+                            600: '#C6E768', 700: '#769237', 800: '#E8F6BF',
+                            900: '#EEF8D2', 950: '#F4FAE5'
+                        },
+                        emerald: {
+                            50: '#F9FBEF', 100: '#F1F6D7', 200: '#E6EEB8',
+                            300: '#536628', 400: '#465921', 500: '#B9D553',
+                            600: '#A7C344', 700: '#657B2F', 800: '#E3EBBE',
+                            900: '#EDF2D7', 950: '#F5F7E9'
+                        },
+                        orange: {
+                            50: '#FFF9F4', 100: '#FFF0E5', 200: '#FFDFC8',
+                            300: '#704326', 400: '#643A20', 500: '#FFA365',
+                            600: '#EF8D4E', 700: '#9B5B32', 800: '#FFE0CB',
+                            900: '#FFE9DA', 950: '#FFF3EA'
+                        },
+                        amber: {
+                            50: '#FFF9F4', 100: '#FFF0E5', 200: '#FFDFC8',
+                            300: '#704326', 400: '#643A20', 500: '#FFA365',
+                            600: '#EF8D4E', 700: '#9B5B32', 800: '#FFE0CB',
+                            900: '#FFE9DA', 950: '#FFF3EA'
+                        },
+                        cyan: {
+                            50: '#F3FCFE', 100: '#E1F7FB', 200: '#C8EFF6',
+                            300: '#245867', 400: '#1A4C5A', 500: '#8CDEF0',
+                            600: '#76CBDE', 700: '#35788A', 800: '#CDEEF4',
+                            900: '#DDF4F8', 950: '#EDF9FB'
+                        },
+                        purple: {
+                            50: '#F3FCFE', 100: '#E1F7FB', 200: '#C8EFF6',
+                            300: '#245867', 400: '#1A4C5A', 500: '#8CDEF0',
+                            600: '#76CBDE', 700: '#35788A', 800: '#CDEEF4',
+                            900: '#DDF4F8', 950: '#EDF9FB'
+                        },
                         brand: {
-                            renova: '#C23378',
-                            renovaDark: '#8A1C52',
-                            burn: '#84CC16',
-                            burnDark: '#4D7C0F',
-                            burnPlus: '#10B981',
-                            burnPlusDark: '#047857',
-                            boost: '#F97316',
-                            boostDark: '#C2410C',
-                            liv: '#06B6D4',
-                            livDark: '#0E7490',
-                            darkBg: '#0B0F19',
-                            cardBg: '#151C2C'
+                            renova: '#F0B6CF',
+                            renovaDark: '#4D263B',
+                            burn: '#D9F878',
+                            burnDark: '#294322',
+                            burnPlus: '#B9D553',
+                            burnPlusDark: '#33411B',
+                            boost: '#FFA365',
+                            boostDark: '#593118',
+                            liv: '#8CDEF0',
+                            livDark: '#153C4A',
+                            darkBg: '#F7F5EC',
+                            cardBg: '#E9EEDB'
                         }
                     },
                     fontFamily: {
@@ -47,66 +102,73 @@
     </script>
     
     <style>
+        @font-face {
+            font-family: 'Manrope';
+            src: url('manrope-variable.ttf') format('truetype');
+            font-style: normal;
+            font-weight: 200 800;
+            font-display: swap;
+        }
         body {
-            background-color: #0B0F19;
-            color: #F3F4F6;
+            background-color: #F7F5EC;
+            color: #203B2E;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
         }
 
         .glass-panel {
-            background: rgba(21, 28, 44, 0.75);
+            background: rgba(247, 245, 236, 0.88);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(32, 59, 46, 0.14);
         }
 
         .glass-card {
-            background: rgba(30, 41, 59, 0.6);
+            background: rgba(233, 238, 219, 0.82);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(32, 59, 46, 0.10);
         }
 
         /* Product Image Glow Effects */
         .img-glow-renova {
-            filter: drop-shadow(0 12px 28px rgba(194, 51, 120, 0.55));
+            filter: drop-shadow(0 12px 28px rgba(240, 182, 207, 0.58));
             transition: filter 0.3s ease, transform 0.3s ease;
         }
         .img-glow-burn {
-            filter: drop-shadow(0 12px 28px rgba(132, 204, 22, 0.55));
+            filter: drop-shadow(0 12px 28px rgba(217, 248, 120, 0.62));
             transition: filter 0.3s ease, transform 0.3s ease;
         }
         .img-glow-burnplus {
-            filter: drop-shadow(0 12px 28px rgba(16, 185, 129, 0.55));
+            filter: drop-shadow(0 12px 28px rgba(185, 213, 83, 0.58));
             transition: filter 0.3s ease, transform 0.3s ease;
         }
         .img-glow-boost {
-            filter: drop-shadow(0 12px 28px rgba(249, 115, 22, 0.55));
+            filter: drop-shadow(0 12px 28px rgba(255, 163, 101, 0.58));
             transition: filter 0.3s ease, transform 0.3s ease;
         }
         .img-glow-liv {
-            filter: drop-shadow(0 12px 28px rgba(6, 182, 212, 0.55));
+            filter: drop-shadow(0 12px 28px rgba(140, 222, 240, 0.62));
             transition: filter 0.3s ease, transform 0.3s ease;
         }
 
         .group:hover .img-glow-renova, .product-container:hover .img-glow-renova {
-            filter: drop-shadow(0 16px 36px rgba(236, 72, 153, 0.75));
+            filter: drop-shadow(0 16px 36px rgba(240, 182, 207, 0.78));
             transform: scale(1.03);
         }
         .group:hover .img-glow-burn, .product-container:hover .img-glow-burn {
-            filter: drop-shadow(0 16px 36px rgba(163, 230, 53, 0.75));
+            filter: drop-shadow(0 16px 36px rgba(217, 248, 120, 0.82));
             transform: scale(1.03);
         }
         .group:hover .img-glow-burnplus, .product-container:hover .img-glow-burnplus {
-            filter: drop-shadow(0 16px 36px rgba(52, 211, 153, 0.75));
+            filter: drop-shadow(0 16px 36px rgba(185, 213, 83, 0.78));
             transform: scale(1.03);
         }
         .group:hover .img-glow-boost, .product-container:hover .img-glow-boost {
-            filter: drop-shadow(0 16px 36px rgba(251, 146, 60, 0.75));
+            filter: drop-shadow(0 16px 36px rgba(255, 163, 101, 0.78));
             transform: scale(1.03);
         }
         .group:hover .img-glow-liv, .product-container:hover .img-glow-liv {
-            filter: drop-shadow(0 16px 36px rgba(34, 211, 238, 0.75));
+            filter: drop-shadow(0 16px 36px rgba(140, 222, 240, 0.82));
             transform: scale(1.03);
         }
 
@@ -150,6 +212,687 @@
             from { opacity: 0; transform: scale(0.97); }
             to { opacity: 1; transform: scale(1); }
         }
+    
+        /* Paleta inspirada en FWP PatoCarlo: solo cambia el color. */
+        :root {
+            --fwp-paper: #F7F5EC;
+            --fwp-ink: #203B2E;
+            --fwp-line: #D0D6C4;
+            --fwp-lime: #D9F878;
+            --fwp-pink: #F0B6CF;
+            --fwp-orange: #FFA365;
+            --fwp-blue: #8CDEF0;
+            --fwp-green: #B9D553;
+        }
+        body { background-color: var(--fwp-paper); color: var(--fwp-ink); }
+        .glass-panel { background: rgba(247,245,236,.91); border-color: rgba(32,59,46,.13); }
+        .glass-card { background: rgba(233,238,219,.78); border-color: rgba(32,59,46,.11); }
+        .modal-active .glass-panel { background: #F7F5EC; }
+        footer.bg-black { background: var(--fwp-ink) !important; color: var(--fwp-paper) !important; }
+        footer.bg-black * { color: var(--fwp-paper) !important; }
+        footer.bg-black a:hover { color: var(--fwp-lime) !important; }
+        input, textarea, select { color: var(--fwp-ink) !important; }
+        ::placeholder { color: #6C815E !important; opacity: 1; }
+        .hero-distributor {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .12rem;
+            margin-bottom: 1.45rem;
+            padding: .15rem .75rem .7rem;
+            border-bottom: 1px solid rgba(122, 53, 79, .4);
+            font-family: 'Manrope', sans-serif;
+            line-height: 1.3;
+        }
+        .hero-distributor-name {
+            color: #713D79;
+            font-size: clamp(1rem, 1.7vw, 1.2rem);
+            font-weight: 650;
+            letter-spacing: -.035em;
+        }
+        .hero-distributor-role {
+            color: #52684C;
+            font-size: clamp(.76rem, 1.25vw, .9rem);
+            font-weight: 500;
+            letter-spacing: -.015em;
+        }
+        .hero-title {
+            color: #713D79;
+            font-family: 'Manrope', sans-serif;
+            font-size: clamp(2.4rem, 4.8vw, 4.8rem);
+            font-weight: 500;
+            letter-spacing: -.07em;
+            line-height: 1.06;
+        }
+        .hero-title .hero-title-accent {
+            background-image: linear-gradient(95deg, #743B83 0%, #9250A0 64%, #39718D 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: 400;
+            -webkit-text-fill-color: transparent;
+        }
+        .pack-title { font-size: clamp(2.7rem, 7vw, 5rem); }
+        @keyframes pack-link-invite {
+            0%, 100% { transform: translateY(0) scale(1); box-shadow: 0 8px 18px rgba(183, 14, 97, .22); }
+            50% { transform: translateY(-4px) scale(1.025); box-shadow: 0 14px 28px rgba(183, 14, 97, .36); }
+        }
+        .pack-link {
+            color: #FFFDF6 !important;
+            animation: pack-link-invite 2.2s ease-in-out infinite;
+            transition: background-color .2s ease;
+        }
+        .pack-link:focus-visible { outline: 3px solid #713D79; outline-offset: 4px; }
+        #inicio { padding-bottom: 0 !important; }
+        .trust-ticker {
+            overflow: hidden;
+            padding: .9rem 0;
+            background: #B70E61;
+            color: #FFFDF6;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 900;
+            line-height: 1.3;
+            white-space: nowrap;
+        }
+        .trust-ticker-track { display: flex; width: max-content; animation: trust-ticker-scroll 28s linear infinite; }
+        .trust-ticker:hover .trust-ticker-track { animation-play-state: paused; }
+        .trust-ticker-group { display: flex; flex: 0 0 auto; align-items: center; gap: 2rem; padding-right: 2rem; }
+        .trust-ticker-dot { font-size: .8rem; opacity: .75; }
+        @keyframes trust-ticker-scroll { to { transform: translateX(-50%); } }
+        @media (max-width: 639px) {
+            .trust-ticker { padding: .85rem 0; }
+            .trust-ticker-group { gap: 1.35rem; padding-right: 1.35rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .trust-ticker { overflow-x: auto; }
+            .trust-ticker-track { animation: none; }
+            .trust-ticker-group:nth-child(2) { display: none; }
+        }
+        @keyframes pack-advice-invite {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+        @keyframes pack-advice-icon {
+            0%, 100% { transform: rotate(-8deg) scale(1); }
+            50% { transform: rotate(8deg) scale(1.12); }
+        }
+        .pack-advice-link {
+            animation: pack-advice-invite 2.5s ease-in-out infinite;
+            transition: background-color .2s ease, border-color .2s ease;
+        }
+        .pack-advice-link:hover { background: #F7D7E5; border-color: #B70E61; }
+        .pack-advice-link i { animation: pack-advice-icon 2.5s ease-in-out infinite; }
+        .pack-advice-link:focus-visible { outline: 3px solid #713D79; outline-offset: 4px; }
+        .venture-section {
+            background: linear-gradient(145deg, #F7F5EC 0%, #FBEAF2 52%, #EAF4EE 100%);
+        }
+        .venture-photo {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 300 / 377;
+            object-fit: cover;
+            overflow: hidden;
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            .venture-card.reveal-pending { opacity: 0; transform: translateY(26px); }
+            .venture-card.reveal-visible { opacity: 1; transform: translateY(0); }
+            .scroll-reveal-media.reveal-pending { opacity: 0; transform: translateY(26px); }
+            .scroll-reveal-media.reveal-visible { opacity: 1; transform: translateY(0); }
+            .scroll-reveal-media { transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.25,1); }
+            .venture-card {
+                transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.25,1), box-shadow .3s ease;
+            }
+            .venture-card.reveal-visible:hover { transform: translateY(-5px); }
+            .venture-card .venture-photo { transition: transform .8s cubic-bezier(.2,.7,.25,1); }
+            .venture-card.reveal-visible .venture-photo { transform: scale(1.025); }
+        }
+        .venture-card {
+            background: #FFFDF9;
+            border: 1px solid rgba(122, 53, 79, .18);
+            border-radius: 1.35rem;
+            overflow: hidden;
+            box-shadow: 0 14px 34px rgba(32, 59, 46, .10);
+        }
+        .venture-video {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 1.35rem;
+            background: #203B2E;
+            box-shadow: 0 18px 40px rgba(32, 59, 46, .16);
+        }
+        .venture-video iframe { display: block; width: 100%; height: 100%; border: 0; }
+        .venture-cta { color: #FFFDF6 !important; }
+        .venture-cta:focus-visible { outline: 3px solid #713D79; outline-offset: 4px; }
+        @media (prefers-reduced-motion: reduce) {
+            .pack-link, .pack-advice-link, .pack-advice-link i { animation: none; }
+        }
+        #mobile-menu { background: #F7F5EC !important; max-height: calc(100dvh - 8rem); overflow-y: auto; }
+        #mobile-menu .mobile-link, #mobile-menu .products-menu summary,
+        header nav a[href^="#"], header nav .products-menu summary { color: #203B2E !important; }
+        #mobile-menu .mobile-link:hover, #mobile-menu .mobile-link:focus-visible,
+        #mobile-menu .products-menu summary:hover, #mobile-menu .products-menu summary:focus-visible,
+        header nav a[href^="#"]:hover, header nav a[href^="#"]:focus-visible,
+        header nav .products-menu summary:hover, header nav .products-menu summary:focus-visible {
+            color: #203B2E !important;
+            background: #E9EEDB !important;
+        }
+        .products-menu summary { display: flex; align-items: center; justify-content: space-between; gap: .5rem; cursor: pointer; list-style: none; }
+        .products-menu summary::-webkit-details-marker { display: none; }
+        .products-menu summary i { transition: transform .2s ease; }
+        .products-menu[open] summary i { transform: rotate(180deg); }
+        .desktop-products-menu { position: relative; }
+        .desktop-products-menu .products-submenu {
+            position: absolute; top: calc(100% + .4rem); left: 0; z-index: 60;
+            min-width: 11rem; padding: .4rem; border-radius: .85rem;
+            background: #F7F5EC; box-shadow: 0 14px 35px rgba(32,59,46,.2);
+        }
+        .desktop-products-menu .products-submenu a { display: block; padding: .6rem .75rem; border-radius: .55rem; }
+        .mobile-products-menu .products-submenu { margin: .15rem 0 .5rem .65rem; padding-left: .65rem; border-left: 2px solid #B7C3AD; }
+        .mobile-products-menu .products-submenu a { display: block; padding: .55rem .75rem; border-radius: .55rem; }
+
+        /* Catálogo visual inspirado en las fichas editoriales de PatoCarlo. */
+        .catalog-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.25rem;
+        }
+        #catalogo-resumen { scroll-margin-top: 6.5rem; }
+        .catalog-showcase-card {
+            --card-bg: #F0B6CF;
+            --card-ink: #4D263B;
+            position: relative;
+            min-height: 825px;
+            padding: 1.6rem 1.6rem 1.25rem;
+            overflow: hidden;
+            border-radius: 2.4rem;
+            color: var(--card-ink);
+            background: var(--card-bg);
+            box-shadow: 0 20px 45px rgba(32, 59, 46, .12);
+            isolation: isolate;
+            transition: transform .35s ease, box-shadow .35s ease;
+        }
+        .catalog-showcase-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 28px 60px rgba(32, 59, 46, .19);
+        }
+        .catalog-showcase-card.card-renova { --card-bg: #F0B6CF; --card-ink: #4D263B; }
+        .catalog-showcase-card.card-burn { --card-bg: #D9F878; --card-ink: #294322; }
+        .catalog-showcase-card.card-burnplus { --card-bg: #B9D553; --card-ink: #33411B; }
+        .catalog-showcase-card.card-boost { --card-bg: #FFA365; --card-ink: #593118; }
+        .catalog-showcase-card.card-liv { --card-bg: #8CDEF0; --card-ink: #153C4A; }
+        .catalog-card-meta {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            position: relative;
+            z-index: 4;
+            font-size: .64rem;
+            line-height: 1.35;
+            font-weight: 700;
+            letter-spacing: .075em;
+            text-transform: uppercase;
+        }
+        .catalog-card-meta span:last-child { text-align: right; }
+        .catalog-product-stage {
+            position: relative;
+            height: 315px;
+            margin: .5rem 0 0;
+        }
+        .catalog-product-word {
+            position: absolute;
+            top: 34%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            width: max-content;
+            max-width: 125%;
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(4.4rem, 7vw, 7rem);
+            font-weight: 500;
+            letter-spacing: -.085em;
+            opacity: .25;
+            white-space: nowrap;
+        }
+        .catalog-product-orbit {
+            position: absolute;
+            z-index: 1;
+            width: 72%;
+            aspect-ratio: 1;
+            left: 14%;
+            top: 7%;
+            border: 1px solid currentColor;
+            border-radius: 50%;
+            opacity: .25;
+        }
+        .catalog-product-stage img {
+            position: absolute;
+            z-index: 2;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(12px 20px 13px rgba(32, 59, 46, .18));
+            transition: transform .55s cubic-bezier(.22, 1, .36, 1);
+        }
+        .catalog-showcase-card:hover .catalog-product-stage img {
+            transform: translateY(-7px) rotate(1.5deg) scale(1.035);
+        }
+        .catalog-card-symbol {
+            position: absolute;
+            right: 1.65rem;
+            top: 58%;
+            z-index: 3;
+            font-size: 3.5rem;
+            line-height: 1;
+            font-weight: 300;
+            opacity: .72;
+        }
+        .catalog-card-ingredients {
+            position: relative;
+            z-index: 4;
+            min-height: 48px;
+            font-size: .88rem;
+            line-height: 1.48;
+            max-width: 78%;
+        }
+        .catalog-card-ingredients strong {
+            display: block;
+            margin-bottom: .2rem;
+            font-size: .58rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            opacity: .7;
+        }
+        .catalog-card-benefits {
+            position: relative;
+            z-index: 4;
+            margin: .15rem 0 .85rem;
+            padding: 1rem 1rem .9rem;
+            border: 1px solid rgba(32, 59, 46, .18);
+            border-radius: 1.15rem;
+            background: rgba(247, 245, 236, .34);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.28);
+        }
+        .catalog-card-benefits strong {
+            display: block;
+            margin-bottom: .6rem;
+            font-size: .62rem;
+            letter-spacing: .11em;
+            text-transform: uppercase;
+        }
+        .catalog-card-benefits ul {
+            display: grid;
+            gap: .42rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .catalog-card-benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: .5rem;
+            font-size: .76rem;
+            font-weight: 600;
+            line-height: 1.38;
+        }
+        .catalog-card-benefits i {
+            margin-top: .14rem;
+            font-size: .72rem;
+            flex: none;
+        }
+        .catalog-card-title {
+            position: relative;
+            z-index: 4;
+            margin-top: 1.15rem;
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(2.6rem, 4vw, 4.15rem);
+            font-weight: 400;
+            line-height: .95;
+            letter-spacing: -.07em;
+        }
+        .catalog-card-tagline {
+            position: relative;
+            z-index: 4;
+            margin-top: .65rem;
+            font-size: .95rem;
+            line-height: 1.35;
+        }
+        .catalog-card-link {
+            position: absolute;
+            z-index: 4;
+            left: 1.6rem;
+            right: 1.6rem;
+            bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .75rem;
+            padding: .82rem 1rem;
+            border: 1px solid rgba(247, 245, 236, .45);
+            border-radius: 1rem;
+            background: #203B2E;
+            color: #F7F5EC;
+            box-shadow: 0 10px 24px rgba(32, 59, 46, .22);
+            font-size: .78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .045em;
+            transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+            animation: catalog-link-attention 3.4s ease-in-out infinite;
+        }
+        .catalog-card-arrow {
+            display: grid;
+            width: 1.75rem;
+            height: 1.75rem;
+            place-items: center;
+            border: 1px solid rgba(247, 245, 236, .45);
+            border-radius: 50%;
+            font-size: 1.15rem;
+            line-height: 1;
+            transition: transform .25s ease, background .25s ease;
+        }
+        @keyframes catalog-link-attention {
+            0%, 65%, 100% { transform: translateY(0); box-shadow: 0 10px 24px rgba(32, 59, 46, .22); }
+            75% { transform: translateY(-4px); box-shadow: 0 16px 30px rgba(32, 59, 46, .32); }
+            84% { transform: translateY(0); box-shadow: 0 10px 24px rgba(32, 59, 46, .22); }
+            92% { transform: translateY(-2px); }
+        }
+        .catalog-card-link:hover {
+            animation-play-state: paused;
+            transform: translateY(-3px);
+            background: #2D4A3B;
+            box-shadow: 0 14px 30px rgba(32, 59, 46, .3);
+        }
+        .catalog-card-link:focus-visible { animation-play-state: paused; outline: 3px solid #203B2E; outline-offset: 3px; }
+        .catalog-card-link:hover .catalog-card-arrow { transform: translate(2px, -2px); background: rgba(247,245,236,.15); }
+        .benefit-panel > button {
+            background: #203B2E !important;
+            border-color: #203B2E !important;
+            box-shadow: 0 8px 22px rgba(32,59,46,.14);
+        }
+        .benefit-panel > button:hover { background: #294638 !important; }
+        .benefit-panel > button span {
+            color: #F7F5EC !important;
+            font-size: .78rem !important;
+        }
+        .benefit-panel > button i { color: #D9F878 !important; }
+        .ingredient-panel > button, .nutrition-panel > button {
+            background: #E9EEDB !important;
+            border-color: #9AAA8D !important;
+            box-shadow: 0 6px 18px rgba(32,59,46,.08);
+        }
+        .ingredient-panel > button:hover, .nutrition-panel > button:hover { background: #DDE7CD !important; }
+        .ingredient-panel > button span, .nutrition-panel > button span { color: #203B2E !important; font-size: .76rem !important; }
+        .ingredient-panel > button i, .nutrition-panel > button i { color: #496A43 !important; }
+        .ingredient-panel .accordion-content, .nutrition-panel .accordion-content {
+            margin-top: .35rem;
+            padding: .9rem !important;
+            border: 1px solid #B7C3AD;
+            border-radius: 1rem;
+            background: #F7F5EC;
+        }
+        .ingredient-panel .accordion-content span {
+            padding: .5rem .75rem !important;
+            background: #E9EEDB !important;
+            color: #203B2E !important;
+            border-color: #8FA084 !important;
+            font-size: .75rem !important;
+            font-weight: 750 !important;
+            line-height: 1.35;
+        }
+        .ingredient-panel .accordion-content, .nutrition-panel .accordion-content { padding: .4rem !important; }
+        .ingredient-image-link, .nutrition-image-link { display: block; cursor: zoom-in; }
+        .ingredient-image-link:focus-visible, .nutrition-image-link:focus-visible { outline: 3px solid #203B2E; outline-offset: 3px; border-radius: .75rem; }
+        .ingredient-diagram, .nutrition-diagram { display: block; width: 100%; height: auto; border-radius: .7rem; }
+        .ingredient-zoom-hint, .nutrition-zoom-hint {
+            display: block;
+            padding: .45rem .25rem .1rem;
+            color: #345443;
+            font-size: .7rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        #renova { --detail-accent: #F0B6CF; --detail-pale: #FBE8F0; --detail-ink: #4D263B; --detail-border: #C97A9F; }
+        [id="24burn"] { --detail-accent: #D9F878; --detail-pale: #F3FBD8; --detail-ink: #294322; --detail-border: #8EAE45; }
+        [id="24burnplus"] { --detail-accent: #B9D553; --detail-pale: #EFF5D6; --detail-ink: #33411B; --detail-border: #819A37; }
+        #eboost { --detail-accent: #FFA365; --detail-pale: #FFF0E4; --detail-ink: #593118; --detail-border: #C77B45; }
+        #liv { --detail-accent: #8CDEF0; --detail-pale: #E8F8FC; --detail-ink: #153C4A; --detail-border: #58A8BC; }
+        .product-detail .benefit-panel > button {
+            background: var(--detail-accent) !important;
+            box-shadow: 0 8px 22px color-mix(in srgb, var(--detail-border) 24%, transparent);
+        }
+        .product-detail .benefit-panel > button,
+        .product-detail .ingredient-panel > button,
+        .product-detail .nutrition-panel > button,
+        .product-detail .preparation-panel > button { border: 0 !important; }
+        .product-detail .benefit-panel > button:hover { background: var(--detail-accent) !important; filter: brightness(.96); }
+        .product-detail .ingredient-panel > button,
+        .product-detail .nutrition-panel > button,
+        .product-detail .preparation-panel > button {
+            background: var(--detail-pale) !important;
+        }
+        .product-detail .ingredient-panel > button:hover,
+        .product-detail .nutrition-panel > button:hover,
+        .product-detail .preparation-panel > button:hover { background: var(--detail-pale) !important; filter: brightness(.97); }
+        .product-detail .benefit-panel > button span,
+        .product-detail .ingredient-panel > button span,
+        .product-detail .nutrition-panel > button span,
+        .product-detail .preparation-panel > button span,
+        .product-detail .benefit-panel > button i,
+        .product-detail .ingredient-panel > button i,
+        .product-detail .nutrition-panel > button i,
+        .product-detail .preparation-panel > button i { color: var(--detail-ink) !important; }
+        .product-detail .preparation-panel .accordion-content > div {
+            background: var(--detail-pale) !important;
+            border: 0 !important;
+        }
+        .product-detail .benefit-panel .accordion-content .grid { gap: .45rem 1.25rem; }
+        .product-detail .benefit-panel .accordion-content .flex.items-start {
+            background: transparent !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            padding: .35rem .1rem !important;
+        }
+        .product-detail .benefit-panel .accordion-content span,
+        .product-detail .benefit-panel .accordion-content i,
+        .product-detail .preparation-panel .accordion-content span { color: var(--detail-ink) !important; }
+        .product-detail .benefit-panel .accordion-content span { font-size: .9rem !important; line-height: 1.5; }
+        .product-detail .benefit-panel .accordion-content i { min-width: 1.1rem; text-align: center; }
+        .product-detail .preparation-panel .accordion-content span.w-6,
+        .product-detail .preparation-note { background: var(--detail-accent) !important; color: var(--detail-ink) !important; }
+        .product-detail .ingredient-panel .accordion-content,
+        .product-detail .nutrition-panel .accordion-content {
+            background: var(--detail-pale);
+            border: 0;
+        }
+        #info-modal .glass-panel { background: #F7F5EC; color: #203B2E; }
+        #info-modal .glass-panel > button { color: #203B2E !important; }
+        #info-modal .glass-panel > button:hover { color: #B70E61 !important; }
+        #info-modal h3, #info-modal label { color: #203B2E !important; }
+        #info-modal .text-pink-400, #info-modal #info-modal-price { color: #8D0B4D !important; }
+        #info-modal textarea { background: #FFFDF6 !important; border-color: #9AAA8D !important; color: #203B2E !important; }
+        #info-modal textarea::placeholder { color: #526B58; opacity: 1; }
+        #info-modal .info-whatsapp-note { background: #F7DDE8; color: #4D263B; border: 0; font-size: .8rem; line-height: 1.45; }
+        #info-modal .info-whatsapp-note i { color: #8D0B4D !important; }
+        #info-modal .info-cancel { background: #DDE7CD; color: #203B2E; }
+        #info-modal .info-cancel:hover { background: #C9D8B8; }
+        .footer-social { width: 2.75rem; height: 2.75rem; border-radius: .8rem; color: #FFFDF6 !important; box-shadow: 0 5px 14px rgba(0,0,0,.18); transition: transform .2s ease, filter .2s ease; }
+        .footer-social:hover { transform: translateY(-3px); filter: brightness(1.08); }
+        .footer-social i { color: #FFFDF6 !important; font-size: 1.4rem; }
+        .footer-social-whatsapp { background: #177A4C; }
+        .footer-social-instagram { background: #A51D61; }
+        .footer-social-tiktok { background: #101820; }
+        @keyframes detailProductFloat {
+            0%, 100% { transform: translateY(0) rotate(-.45deg); }
+            50% { transform: translateY(-10px) rotate(.55deg); }
+        }
+        @keyframes detailPackageBreath {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -52%) scale(1.025); }
+        }
+        .detail-ingredient-art {
+            position: relative;
+            z-index: 2;
+            display: block;
+            width: min(100%, 430px);
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border: 0;
+            border-radius: 46% 54% 43% 57% / 52% 44% 56% 48%;
+            background: #F7F5EC;
+            box-shadow: 0 20px 38px rgba(0,0,0,.25);
+            animation: detailProductFloat 5.4s ease-in-out infinite;
+            will-change: transform;
+        }
+        .detail-art-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .detail-art-product {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            top: 48%;
+            width: 61%;
+            height: 72%;
+            object-fit: contain;
+            filter: drop-shadow(0 18px 17px rgba(27, 36, 29, .28));
+            animation: detailPackageBreath 4.6s ease-in-out infinite;
+            will-change: transform;
+        }
+        .detail-product-renova { width: 58%; height: 73%; top: 47%; }
+        .detail-product-burn { width: 61%; height: 73%; top: 47%; }
+        .detail-product-plus { width: 58%; height: 70%; top: 47%; }
+        .detail-product-boost { width: 64%; height: 68%; top: 47%; }
+        .detail-product-liv { width: 59%; height: 70%; top: 47%; }
+        .detail-art-burn { animation-delay: -.8s; }
+        .detail-art-plus { animation-delay: -1.6s; }
+        .detail-art-boost { animation-delay: -2.4s; }
+        .detail-art-liv { animation-delay: -3.2s; }
+        .hero-product-showcase {
+            position: relative;
+            isolation: isolate;
+            width: 100%;
+            min-height: 290px;
+            aspect-ratio: 3.15 / 1;
+            overflow: hidden;
+            border: 1px solid rgba(32, 59, 46, .18);
+            border-radius: 2rem;
+            background:
+                radial-gradient(circle at 50% 48%, rgba(231, 164, 193, .30) 0 12%, rgba(231, 164, 193, 0) 32%),
+                #F7F5EC;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, .28);
+        }
+        .hero-product-showcase::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            inset: 17% 3.5% 12%;
+            border: 1px solid rgba(90, 120, 82, .38);
+            border-radius: 50%;
+            transform: rotate(-1.5deg);
+        }
+        .hero-showcase-spark {
+            position: absolute;
+            z-index: 1;
+            left: 4.6%;
+            top: 8%;
+            color: #7F9160;
+            font-size: clamp(1.8rem, 4vw, 3.4rem);
+            font-weight: 300;
+            line-height: 1;
+        }
+        .hero-product {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            transition: transform .35s ease, filter .35s ease;
+        }
+        .hero-product img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 18px 14px rgba(28, 36, 29, .22));
+        }
+        .hero-product:hover { z-index: 8; filter: brightness(1.025); }
+        .hero-product-burn { left: 5%; top: 12%; width: 18%; height: 80%; transform: rotate(-4deg); }
+        .hero-product-burn:hover { transform: rotate(-2deg) translateY(-7px); }
+        .hero-product-eboost { left: 22%; top: 24%; width: 21%; height: 67%; transform: rotate(3deg); }
+        .hero-product-eboost:hover { transform: rotate(1deg) translateY(-7px); }
+        .hero-product-renova {
+            z-index: 6;
+            left: 38%;
+            top: 0;
+            width: 25%;
+            height: 99%;
+            transform: rotate(-1deg) scale(1.04);
+        }
+        .hero-product-renova img { filter: drop-shadow(0 23px 18px rgba(145, 27, 93, .28)); }
+        .hero-product-renova:hover { transform: rotate(0deg) scale(1.075) translateY(-4px); }
+        .hero-product-liv { left: 61%; top: 20%; width: 18%; height: 72%; transform: rotate(5deg); }
+        .hero-product-liv:hover { transform: rotate(3deg) translateY(-7px); }
+        .hero-product-plus { right: 3%; top: 13%; width: 20%; height: 79%; transform: rotate(7deg); }
+        .hero-product-plus:hover { transform: rotate(5deg) translateY(-7px); }
+        .preparation-note {
+            margin-top: .9rem;
+            padding: .75rem .9rem;
+            border: 1px solid rgba(32, 59, 46, .22);
+            border-radius: .75rem;
+            background: #E9EEDB;
+            color: #203B2E;
+            font-size: .85rem;
+            font-weight: 750;
+            line-height: 1.4;
+        }
+        @media (max-width: 1023px) {
+            .catalog-showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 639px) {
+            #inicio { padding-bottom: 0 !important; }
+            #catalogo-resumen { padding-top: 2rem !important; }
+            .product-detail { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+            .product-detail .grid.lg\:grid-cols-12 { gap: 1.25rem; }
+            .product-detail .preparation-panel { margin-bottom: .9rem !important; }
+            .detail-ingredient-art { width: 100%; max-width: none; }
+            .hero-product-showcase {
+                min-height: 250px;
+                aspect-ratio: 1.43 / 1;
+                margin-top: -1rem !important;
+                margin-bottom: -.25rem !important;
+                overflow: visible;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+                box-shadow: none;
+            }
+            .hero-product-showcase::before, .hero-showcase-spark { display: none; }
+            .hero-product-burn { left: -6%; top: 16%; width: 35%; height: 74%; }
+            .hero-product-eboost { left: 11%; top: 28%; width: 36%; height: 63%; }
+            .hero-product-renova { left: 25%; top: 0; width: 50%; height: 94%; }
+            .hero-product-liv { left: 60%; top: 27%; width: 34%; height: 65%; }
+            .hero-product-plus { right: -6%; top: 17%; width: 35%; height: 74%; }
+            .catalog-showcase-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .catalog-showcase-card { min-height: 0; padding: 1.35rem 1.3rem 1.2rem; border-radius: 2rem; }
+            .catalog-card-meta { font-size: .57rem; }
+            .catalog-product-stage { height: 300px; }
+            .catalog-product-word { font-size: clamp(4.1rem, 21vw, 6rem); }
+            .catalog-card-symbol { right: 1.3rem; }
+            .catalog-card-link { position: relative; left: auto; right: auto; bottom: auto; margin-top: 1.25rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .catalog-showcase-card, .catalog-product-stage img, .catalog-card-link, .catalog-card-arrow, .hero-product { transition: none; }
+            .catalog-card-link { animation: none; }
+            .detail-ingredient-art, .detail-art-product { animation: none; }
+            .detail-art-product { transform: translate(-50%, -50%); }
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-pink-500 selection:text-white">
@@ -187,14 +930,20 @@
                 </div>
 
                 <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2">
+                <nav class="hidden xl:flex items-center space-x-1 xl:space-x-2">
                     <a href="#inicio" class="px-3 py-2 text-xs font-medium text-gray-300 hover:text-white hover:bg-gray-800/60 rounded-lg transition">Inicio</a>
-                    <a href="#renova" class="px-3 py-2 text-xs font-medium text-pink-400 hover:text-pink-300 hover:bg-pink-950/30 rounded-lg transition">RENÖVA+</a>
-                    <a href="#24burn" class="px-3 py-2 text-xs font-medium text-lime-400 hover:text-lime-300 hover:bg-lime-950/30 rounded-lg transition">24BURN</a>
-                    <a href="#24burnplus" class="px-3 py-2 text-xs font-medium text-emerald-400 hover:text-emerald-300 hover:bg-emerald-950/30 rounded-lg transition">24BURN+</a>
-                    <a href="#eboost" class="px-3 py-2 text-xs font-medium text-orange-400 hover:text-orange-300 hover:bg-orange-950/30 rounded-lg transition">E-BOOST</a>
-                    <a href="#liv" class="px-3 py-2 text-xs font-medium text-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 rounded-lg transition">LIV</a>
+                    <details class="products-menu desktop-products-menu">
+                        <summary class="px-3 py-2 text-xs font-medium rounded-lg transition">Productos <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i></summary>
+                        <div class="products-submenu">
+                            <a href="#renova" class="text-xs font-medium transition">RENÖVA+</a>
+                            <a href="#24burn" class="text-xs font-medium transition">24BURN</a>
+                            <a href="#24burnplus" class="text-xs font-medium transition">24BURN+</a>
+                            <a href="#eboost" class="text-xs font-medium transition">E-BOOST</a>
+                            <a href="#liv" class="text-xs font-medium transition">LIV</a>
+                        </div>
+                    </details>
                     <a href="#pack-mayoristas" class="px-3 py-2 text-xs font-medium text-amber-400 hover:text-amber-300 hover:bg-amber-950/30 rounded-lg transition">Pack Mayoristas</a>
+                    <a href="#emprende" class="px-3 py-2 text-xs font-medium text-pink-400 hover:text-pink-300 hover:bg-pink-950/30 rounded-lg transition">Emprende con FWP</a>
                     <a href="#contacto" class="px-3 py-2 text-xs font-medium text-gray-300 hover:text-white hover:bg-gray-800/60 rounded-lg transition">Contacto</a>
                 </nav>
 
@@ -204,7 +953,7 @@
                         <i class="fa-solid fa-grid-2 mr-2"></i> Ver Catálogo
                     </a>
                     
-                    <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none" aria-label="Abrir menú">
+                    <button id="mobile-menu-btn" type="button" class="xl:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -212,7 +961,7 @@
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-gray-900/95 border-b border-gray-800 px-4 pt-2 pb-6 space-y-2">
+        <div id="mobile-menu" class="hidden xl:hidden bg-gray-900/95 border-b border-gray-800 px-4 pt-2 pb-6 space-y-2">
             <div class="p-3 bg-gray-800/50 rounded-xl mb-3 flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-full bg-pink-600/30 border border-pink-500/40 flex items-center justify-center text-pink-400 font-bold">RF</div>
                 <div>
@@ -221,12 +970,18 @@
                 </div>
             </div>
             <a href="#inicio" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-gray-800">Inicio</a>
-            <a href="#renova" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-pink-400 hover:bg-pink-950/40">RENÖVA+</a>
-            <a href="#24burn" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-lime-400 hover:bg-lime-950/40">24BURN</a>
-            <a href="#24burnplus" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-emerald-400 hover:bg-emerald-950/40">24BURN+</a>
-            <a href="#eboost" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-orange-400 hover:bg-orange-950/40">E-BOOST</a>
-            <a href="#liv" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-cyan-400 hover:bg-cyan-950/40">LIV</a>
+            <details class="products-menu mobile-products-menu">
+                <summary class="px-3 py-2 rounded-lg text-base font-medium">Productos <i class="fa-solid fa-chevron-down text-xs" aria-hidden="true"></i></summary>
+                <div class="products-submenu">
+                    <a href="#renova" class="mobile-link text-base font-medium">RENÖVA+</a>
+                    <a href="#24burn" class="mobile-link text-base font-medium">24BURN</a>
+                    <a href="#24burnplus" class="mobile-link text-base font-medium">24BURN+</a>
+                    <a href="#eboost" class="mobile-link text-base font-medium">E-BOOST</a>
+                    <a href="#liv" class="mobile-link text-base font-medium">LIV</a>
+                </div>
+            </details>
             <a href="#pack-mayoristas" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-amber-400 hover:bg-amber-950/40">PACK MAYORISTAS</a>
+            <a href="#emprende" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-pink-400 hover:bg-pink-950/40">EMPRENDE CON FWP</a>
             <a href="#contacto" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-gray-800">Contacto & Distribución</a>
         </div>
     </header>
@@ -236,28 +991,59 @@
         <div class="absolute top-1/3 left-10 w-72 h-72 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute top-1/2 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-4xl mx-auto text-center">
+        <div class="trust-ticker relative z-10" role="region" aria-label="Características de la línea FWP">
+            <span class="sr-only">Formulado por médicos. Ingredientes premium. Calidad garantizada. Disponible en Chile.</span>
+            <div class="trust-ticker-track" aria-hidden="true">
+                <div class="trust-ticker-group">
+                    <span>Formulado por médicos</span><span class="trust-ticker-dot">●</span>
+                    <span>Ingredientes premium</span><span class="trust-ticker-dot">●</span>
+                    <span>Calidad garantizada</span><span class="trust-ticker-dot">●</span>
+                    <span>Disponible en Chile</span><span class="trust-ticker-dot">●</span>
+                </div>
+                <div class="trust-ticker-group">
+                    <span>Formulado por médicos</span><span class="trust-ticker-dot">●</span>
+                    <span>Ingredientes premium</span><span class="trust-ticker-dot">●</span>
+                    <span>Calidad garantizada</span><span class="trust-ticker-dot">●</span>
+                    <span>Disponible en Chile</span><span class="trust-ticker-dot">●</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-10 relative z-10">
+            <div class="max-w-6xl mx-auto text-center">
                 
                 <!-- Hero Content -->
                 <div>
-                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-gray-800/80 border border-pink-500/30 text-pink-300 text-xs sm:text-sm font-semibold mb-6 shadow-lg">
-                        <span class="flex h-2 w-2 rounded-full bg-pink-500 animate-pulse"></span>
-                        <i class="fa-solid fa-award text-pink-400"></i>
-                        <span>Rossie Farías — Distribuidora Oficial FWP en Chile</span>
+                    <div class="hero-distributor">
+                        <span class="hero-distributor-name">Rossie Farías</span>
+                        <span class="hero-distributor-role">Distribuidora Oficial FWP en Chile</span>
                     </div>
 
-                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-6">
+                    <h1 class="hero-title mb-6">
                         Nutrición de Alta Gama <br class="hidden sm:inline">
-                        <span class="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                        <span class="hero-title-accent">
                             Diseñada para tu Vitalidad
                         </span>
                     </h1>
 
-                    <!-- Hero Banner FWP Line Showcase -->
-                    <div class="my-6 relative rounded-2xl overflow-hidden glass-card p-2 sm:p-4 border border-gray-700/60 shadow-2xl group">
-                        <div class="absolute inset-0 bg-gradient-to-r from-pink-500/15 via-lime-500/15 to-cyan-500/15 opacity-60 blur-xl pointer-events-none"></div>
-                        <img src="baner1.png" alt="Línea Completa de Productos FWP Chile" class="w-full h-auto object-contain rounded-xl relative z-10 filter drop-shadow-[0_10px_25px_rgba(0,0,0,0.6)] transition-transform duration-500 group-hover:scale-[1.01]" />
+                    <!-- Composición editorial de la línea FWP -->
+                    <div class="hero-product-showcase my-7" aria-label="Línea completa de productos FWP">
+                        <span class="hero-showcase-spark" aria-hidden="true">✳</span>
+                        <a href="#24burn" class="hero-product hero-product-burn" aria-label="Conocer 24BURN">
+                            <img src="24burn1.png" alt="24BURN FWP" />
+                        </a>
+                        <a href="#eboost" class="hero-product hero-product-eboost" aria-label="Conocer E-BOOST">
+                            <img src="eboost1.png" alt="E-BOOST FWP" />
+                        </a>
+                        <a href="#renova" class="hero-product hero-product-renova" aria-label="Conocer RENÖVA+">
+                            <img src="renova1.png" alt="RENÖVA+ FWP" />
+                        </a>
+                        <a href="#liv" class="hero-product hero-product-liv" aria-label="Conocer LIV">
+                            <img src="liv1.png" alt="LIV FWP" />
+                        </a>
+                        <a href="#24burnplus" class="hero-product hero-product-plus" aria-label="Conocer 24BURN+">
+                            <img src="24burn2.png" alt="24BURN+ FWP" />
+                        </a>
                     </div>
 
                     <p class="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
@@ -275,24 +1061,6 @@
                         </a>
                     </div>
 
-                    <div class="pt-6 border-t border-gray-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4">
-                        <div class="flex items-center justify-center space-x-2 text-gray-400 text-xs">
-                            <i class="fa-solid fa-user-md text-pink-400 text-lg"></i>
-                            <span>Formulado por Médicos</span>
-                        </div>
-                        <div class="flex items-center justify-center space-x-2 text-gray-400 text-xs">
-                            <i class="fa-solid fa-shield-check text-lime-400 text-lg"></i>
-                            <span>Calidad Garantizada</span>
-                        </div>
-                        <div class="flex items-center justify-center space-x-2 text-gray-400 text-xs">
-                            <i class="fa-solid fa-leaf text-emerald-400 text-lg"></i>
-                            <span>Ingredientes Premium</span>
-                        </div>
-                        <div class="flex items-center justify-center space-x-2 text-gray-400 text-xs">
-                            <i class="fa-solid fa-earth-americas text-cyan-400 text-lg"></i>
-                            <span>Disponible en Chile</span>
-                        </div>
-                    </div>
                 </div>
 
             </div>
@@ -314,247 +1082,130 @@
                 </p>
             </div>
 
-            <!-- 5 Products Quick Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-
-                <!-- 1. RENÖVA+ -->
-                <div class="glass-card rounded-2xl p-4 border border-pink-500/30 flex flex-col justify-between hover:border-pink-500/70 transition-all duration-300 shadow-lg group">
-                    <div class="space-y-3">
-                        <div class="relative rounded-xl overflow-hidden border border-pink-500/30 bg-gradient-to-br from-pink-950/90 via-gray-900 to-black p-4 text-center min-h-[250px] flex flex-col justify-between items-center">
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-pink-500/25 rounded-full blur-2xl pointer-events-none"></div>
-                            
-                            <div class="w-full flex items-center justify-start z-10">
-                                <span class="text-[10px] font-bold text-pink-400 tracking-wider uppercase bg-pink-900/50 border border-pink-500/30 px-2 py-0.5 rounded-full">Peptan & GELITA</span>
-                            </div>
-
-                            <div class="my-3 relative z-10 flex items-center justify-center w-full h-36">
-                                <img src="renova1.png" alt="RENÖVA+ FWP" class="max-h-36 max-w-full object-contain img-glow-renova" />
-                            </div>
-
-                            <div class="z-10 w-full">
-                                <h3 class="font-heading text-xl font-black text-white tracking-tight">RENÖVA+</h3>
-                                <p class="text-[10px] font-bold text-pink-300 uppercase tracking-widest mt-0.5">Dosis Diaria de Juventud</p>
-                            </div>
-                        </div>
-
-                        <div class="p-3 bg-gray-950/80 rounded-xl border border-pink-500/20 text-xs text-gray-200">
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-pink-400 block mb-2">Beneficios Clave:</span>
-                            <ul class="space-y-1.5 text-[11px] text-left">
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-pink-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Salud de piel, uñas y cabello</span></li>
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-pink-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Fortalece sistema inmunológico</span></li>
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-pink-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Refuerza articulaciones y músculos</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="py-1.5 px-2.5 bg-pink-950/40 rounded-xl border border-pink-500/20 text-[10px] text-pink-200 text-center font-medium">
-                            Colágeno Doblemente Hidrolizado + Q10
-                        </div>
+            <!-- 5 fichas editoriales: nombre + ingredientes, sin precios -->
+            <div class="catalog-showcase-grid">
+                <article class="catalog-showcase-card card-renova">
+                    <div class="catalog-card-meta"><span>01 / Cuidado diario</span><span>315 g · Berries</span></div>
+                    <div class="catalog-product-stage">
+                        <span class="catalog-product-word" aria-hidden="true">Renöva+</span>
+                        <span class="catalog-product-orbit" aria-hidden="true"></span>
+                        <img src="renova1.png" alt="Envase RENÖVA+ FWP sabor berries" loading="lazy" />
                     </div>
-
-                    <div class="mt-4 pt-3 border-t border-gray-800">
-                        <a href="#renova" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-500 hover:to-rose-500 text-white font-black text-xs uppercase tracking-wider flex items-center justify-center space-x-2 btn-dynamic-move shadow-lg shadow-pink-900/30">
-                            <span>MÁS INFORMACIÓN</span>
-                            <i class="fa-solid fa-arrow-down text-xs"></i>
-                        </a>
+                    <span class="catalog-card-symbol" aria-hidden="true">+</span>
+                    <div class="catalog-card-benefits">
+                        <strong>Beneficios clave</strong>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Salud de piel, uñas y cabello</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Fortalece el sistema inmunológico</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Refuerza articulaciones y músculos</span></li>
+                        </ul>
                     </div>
-                </div>
+                    <p class="catalog-card-ingredients"><strong>Fórmula destacada</strong>Biopéptidos activos de colágeno + Q10</p>
+                    <h3 class="catalog-card-title">RENÖVA+</h3>
+                    <p class="catalog-card-tagline">Dosis diaria de juventud.</p>
+                    <a href="#renova" class="catalog-card-link" aria-label="Conocer fórmula y detalles de RENÖVA+"><span>Fórmula y detalles</span><span class="catalog-card-arrow" aria-hidden="true">↗</span></a>
+                </article>
 
-                <!-- 2. 24BURN -->
-                <div class="glass-card rounded-2xl p-4 border border-lime-500/30 flex flex-col justify-between hover:border-lime-500/70 transition-all duration-300 shadow-lg group">
-                    <div class="space-y-3">
-                        <div class="relative rounded-xl overflow-hidden border border-lime-500/30 bg-gradient-to-br from-lime-950/90 via-gray-900 to-black p-4 text-center min-h-[250px] flex flex-col justify-between items-center">
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-lime-500/25 rounded-full blur-2xl pointer-events-none"></div>
-
-                            <div class="w-full flex items-center justify-start z-10">
-                                <span class="text-[10px] font-bold text-lime-400 tracking-wider uppercase bg-lime-900/50 border border-lime-500/30 px-2 py-0.5 rounded-full">HACCP Certified</span>
-                            </div>
-
-                            <div class="my-3 relative z-10 flex items-center justify-center w-full h-36">
-                                <img src="24burn1.png" alt="24BURN FWP" class="max-h-36 max-w-full object-contain img-glow-burn" />
-                            </div>
-
-                            <div class="z-10 w-full">
-                                <h3 class="font-heading text-xl font-black text-white tracking-tight">24BURN</h3>
-                                <p class="text-[10px] font-bold text-lime-300 uppercase tracking-widest mt-0.5">Reduce y Activa</p>
-                            </div>
-                        </div>
-
-                        <div class="p-3 bg-gray-950/80 rounded-xl border border-lime-500/20 text-xs text-gray-200">
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-lime-400 block mb-2">Beneficios Clave:</span>
-                            <ul class="space-y-1.5 text-[11px] text-left">
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-lime-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Acelera tu metabolismo</span></li>
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-lime-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Aumenta saciedad para control de peso</span></li>
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-lime-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Activación física y mental diaria</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="py-1.5 px-2.5 bg-lime-950/40 rounded-xl border border-lime-500/20 text-[10px] text-lime-200 text-center font-medium">
-                            Té Verde + Panax Ginseng + L-Carnitina
-                        </div>
+                <article class="catalog-showcase-card card-burn">
+                    <div class="catalog-card-meta"><span>02 / Metabolismo y energía</span><span>Fórmula en polvo</span></div>
+                    <div class="catalog-product-stage">
+                        <span class="catalog-product-word" aria-hidden="true">24Burn</span>
+                        <span class="catalog-product-orbit" aria-hidden="true"></span>
+                        <img src="24burn1.png" alt="Envase 24BURN FWP sabor té limón" loading="lazy" />
                     </div>
-
-                    <div class="mt-4 pt-3 border-t border-gray-800">
-                        <a href="#24burn" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-lime-600 to-emerald-600 hover:from-lime-500 hover:to-emerald-500 text-white font-black text-xs uppercase tracking-wider flex items-center justify-center space-x-2 btn-dynamic-move shadow-lg shadow-lime-900/30">
-                            <span>MÁS INFORMACIÓN</span>
-                            <i class="fa-solid fa-arrow-down text-xs"></i>
-                        </a>
+                    <span class="catalog-card-symbol" aria-hidden="true">↗</span>
+                    <div class="catalog-card-benefits">
+                        <strong>Beneficios clave</strong>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Acelera tu metabolismo</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Aumenta la saciedad para el control de peso</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Activación física y mental diaria</span></li>
+                        </ul>
                     </div>
-                </div>
+                    <p class="catalog-card-ingredients"><strong>Fórmula destacada</strong>Té verde + Panax ginseng + L-carnitina</p>
+                    <h3 class="catalog-card-title">24BURN</h3>
+                    <p class="catalog-card-tagline">Hazle lugar al movimiento.</p>
+                    <a href="#24burn" class="catalog-card-link" aria-label="Conocer fórmula y detalles de 24BURN"><span>Fórmula y detalles</span><span class="catalog-card-arrow" aria-hidden="true">↗</span></a>
+                </article>
 
-                <!-- 3. 24BURN+ -->
-                <div class="glass-card rounded-2xl p-4 border border-emerald-500/30 flex flex-col justify-between hover:border-emerald-500/70 transition-all duration-300 shadow-lg group">
-                    <div class="space-y-3">
-                        <div class="relative rounded-xl overflow-hidden border border-emerald-500/30 bg-gradient-to-br from-emerald-950/90 via-gray-900 to-black p-4 text-center min-h-[250px] flex flex-col justify-between items-center">
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-emerald-500/25 rounded-full blur-2xl pointer-events-none"></div>
-
-                            <div class="w-full flex items-center justify-start z-10">
-                                <span class="text-[10px] font-bold text-emerald-400 tracking-wider uppercase bg-emerald-900/50 border border-emerald-500/30 px-2 py-0.5 rounded-full">Sin Cafeína</span>
-                            </div>
-
-                            <div class="my-3 relative z-10 flex items-center justify-center w-full h-36">
-                                <img src="24burn2.png" alt="24BURN+ FWP" class="max-h-36 max-w-full object-contain img-glow-burnplus" />
-                            </div>
-
-                            <div class="z-10 w-full">
-                                <h3 class="font-heading text-xl font-black text-white tracking-tight">24BURN+</h3>
-                                <p class="text-[10px] font-bold text-emerald-300 uppercase tracking-widest mt-0.5">Reduce y Activa</p>
-                            </div>
-                        </div>
-
-                        <div class="p-3 bg-gray-950/80 rounded-xl border border-emerald-500/20 text-xs text-gray-200">
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 block mb-2">Beneficios Clave:</span>
-                            <ul class="space-y-1.5 text-[11px] text-left">
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-emerald-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Optimiza oxidación de grasas</span></li>
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-emerald-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Acelera recuperación muscular</span></li>
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-emerald-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Protección antioxidante avanzada</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="py-1.5 px-2.5 bg-emerald-950/40 rounded-xl border border-emerald-500/20 text-[10px] text-emerald-200 text-center font-medium">
-                            Superalimentos + Citrato de MG + Té Limón
-                        </div>
+                <article class="catalog-showcase-card card-boost">
+                    <div class="catalog-card-meta"><span>03 / Energía y enfoque</span><span>28 sachets × 7 g</span></div>
+                    <div class="catalog-product-stage">
+                        <span class="catalog-product-word" aria-hidden="true">E-Boost</span>
+                        <span class="catalog-product-orbit" aria-hidden="true"></span>
+                        <img src="eboost1.png" alt="Caja E-BOOST FWP sabor mandarina" loading="lazy" />
                     </div>
-
-                    <div class="mt-4 pt-3 border-t border-gray-800">
-                        <a href="#24burnplus" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs uppercase tracking-wider flex items-center justify-center space-x-2 btn-dynamic-move shadow-lg shadow-emerald-900/30">
-                            <span>MÁS INFORMACIÓN</span>
-                            <i class="fa-solid fa-arrow-down text-xs"></i>
-                        </a>
+                    <span class="catalog-card-symbol" aria-hidden="true">✳</span>
+                    <div class="catalog-card-benefits">
+                        <strong>Beneficios clave</strong>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Energía saludable y concentración</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Ayuda a disminuir la fatiga y el cansancio mental</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Potenciado con aminoácidos BCAA</span></li>
+                        </ul>
                     </div>
-                </div>
+                    <p class="catalog-card-ingredients"><strong>Fórmula destacada</strong>Té negro + Guaraná + Yerba mate + BCAA</p>
+                    <h3 class="catalog-card-title">E-BOOST</h3>
+                    <p class="catalog-card-tagline">Tu energía tiene dirección.</p>
+                    <a href="#eboost" class="catalog-card-link" aria-label="Conocer fórmula y detalles de E-BOOST"><span>Fórmula y detalles</span><span class="catalog-card-arrow" aria-hidden="true">↗</span></a>
+                </article>
 
-                <!-- 4. E-BOOST -->
-                <div class="glass-card rounded-2xl p-4 border border-orange-500/30 flex flex-col justify-between hover:border-orange-500/70 transition-all duration-300 shadow-lg group">
-                    <div class="space-y-3">
-                        <div class="relative rounded-xl overflow-hidden border border-orange-500/30 bg-gradient-to-br from-orange-950/90 via-gray-900 to-black p-4 text-center min-h-[250px] flex flex-col justify-between items-center">
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-orange-500/25 rounded-full blur-2xl pointer-events-none"></div>
-
-                            <div class="w-full flex items-center justify-start z-10">
-                                <span class="text-[10px] font-bold text-orange-400 tracking-wider uppercase bg-orange-900/50 border border-orange-500/30 px-2 py-0.5 rounded-full">No Sugar Added</span>
-                            </div>
-
-                            <div class="my-3 relative z-10 flex items-center justify-center w-full h-36">
-                                <img src="eboost1.png" alt="E-BOOST FWP" class="max-h-36 max-w-full object-contain img-glow-boost" />
-                            </div>
-
-                            <div class="z-10 w-full">
-                                <h3 class="font-heading text-xl font-black text-white tracking-tight">E⚡BOOST</h3>
-                                <p class="text-[10px] font-bold text-orange-300 uppercase tracking-widest mt-0.5">Potencia y Energía</p>
-                            </div>
-                        </div>
-
-                        <div class="p-3 bg-gray-950/80 rounded-xl border border-orange-500/20 text-xs text-gray-200">
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-orange-400 block mb-2">Beneficios Clave:</span>
-                            <ul class="space-y-1.5 text-[11px] text-left">
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-orange-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Energía saludable y concentración</span></li>
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-orange-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Elimina fatiga y cansancio mental</span></li>
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-orange-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Potenciado con aminoácidos BCAA</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="py-1.5 px-2.5 bg-orange-950/40 rounded-xl border border-orange-500/20 text-[10px] text-orange-200 text-center font-medium">
-                            Té Negro + Guaraná + Yerba Mate + BCAA
-                        </div>
+                <article class="catalog-showcase-card card-liv">
+                    <div class="catalog-card-meta"><span>04 / Bienestar digestivo</span><span>28 porciones</span></div>
+                    <div class="catalog-product-stage">
+                        <span class="catalog-product-word" aria-hidden="true">LIV</span>
+                        <span class="catalog-product-orbit" aria-hidden="true"></span>
+                        <img src="liv1.png" alt="Envase LIV FWP sabor manzana verde" loading="lazy" />
                     </div>
-
-                    <div class="mt-4 pt-3 border-t border-gray-800">
-                        <a href="#eboost" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white font-black text-xs uppercase tracking-wider flex items-center justify-center space-x-2 btn-dynamic-move shadow-lg shadow-orange-900/30">
-                            <span>MÁS INFORMACIÓN</span>
-                            <i class="fa-solid fa-arrow-down text-xs"></i>
-                        </a>
+                    <span class="catalog-card-symbol" aria-hidden="true">∿</span>
+                    <div class="catalog-card-benefits">
+                        <strong>Beneficios clave</strong>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Limpieza interna y detox natural</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Probióticos para la flora intestinal</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Prolonga la saciedad y ayuda al control de peso</span></li>
+                        </ul>
                     </div>
-                </div>
+                    <p class="catalog-card-ingredients"><strong>Fórmula destacada</strong>Fibras solubles e insolubles + Probióticos</p>
+                    <h3 class="catalog-card-title">LIV</h3>
+                    <p class="catalog-card-tagline">Escucha tu propio ritmo.</p>
+                    <a href="#liv" class="catalog-card-link" aria-label="Conocer fórmula y detalles de LIV"><span>Fórmula y detalles</span><span class="catalog-card-arrow" aria-hidden="true">↗</span></a>
+                </article>
 
-                <!-- 5. LIV -->
-                <div class="glass-card rounded-2xl p-4 border border-cyan-500/30 flex flex-col justify-between hover:border-cyan-500/70 transition-all duration-300 shadow-lg group md:col-span-2 lg:col-span-1">
-                    <div class="space-y-3">
-                        <div class="relative rounded-xl overflow-hidden border border-cyan-500/30 bg-gradient-to-br from-cyan-950/90 via-gray-900 to-black p-4 text-center min-h-[250px] flex flex-col justify-between items-center">
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-cyan-500/25 rounded-full blur-2xl pointer-events-none"></div>
-
-                            <div class="w-full flex items-center justify-start z-10">
-                                <span class="text-[10px] font-bold text-cyan-400 tracking-wider uppercase bg-cyan-900/50 border border-cyan-500/30 px-2 py-0.5 rounded-full">Doctors Formulated</span>
-                            </div>
-
-                            <div class="my-3 relative z-10 flex items-center justify-center w-full h-36">
-                                <img src="liv1.png" alt="LIV FWP" class="max-h-36 max-w-full object-contain img-glow-liv" />
-                            </div>
-
-                            <div class="z-10 w-full">
-                                <h3 class="font-heading text-xl font-black text-white tracking-tight">LIV</h3>
-                                <p class="text-[10px] font-bold text-cyan-300 uppercase tracking-widest mt-0.5">Ligereza que Fluye</p>
-                            </div>
-                        </div>
-
-                        <div class="p-3 bg-gray-950/80 rounded-xl border border-cyan-500/20 text-xs text-gray-200">
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-cyan-400 block mb-2">Beneficios Clave:</span>
-                            <ul class="space-y-1.5 text-[11px] text-left">
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-cyan-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Limpieza interna y detox natural</span></li>
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-cyan-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Probióticos para la flora intestinal</span></li>
-                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-cyan-400 text-xs mt-0.5 mr-1.5 shrink-0"></i><span>Prolonga saciedad y ayuda al control de peso</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="py-1.5 px-2.5 bg-cyan-950/40 rounded-xl border border-cyan-500/20 text-[10px] text-cyan-200 text-center font-medium">
-                            Fibras Solubles e Insolubles + Probióticos
-                        </div>
+                <article class="catalog-showcase-card card-burnplus">
+                    <div class="catalog-card-meta"><span>05 / Metabolismo y rendimiento</span><span>28 tomas · Té limón</span></div>
+                    <div class="catalog-product-stage">
+                        <span class="catalog-product-word" aria-hidden="true">24B+</span>
+                        <span class="catalog-product-orbit" aria-hidden="true"></span>
+                        <img src="24burn2.png" alt="Envase 24BURN+ FWP sabor té limón" loading="lazy" />
                     </div>
-
-                    <div class="mt-4 pt-3 border-t border-gray-800">
-                        <a href="#liv" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-500 hover:to-teal-500 text-white font-black text-xs uppercase tracking-wider flex items-center justify-center space-x-2 btn-dynamic-move shadow-lg shadow-cyan-900/30">
-                            <span>MÁS INFORMACIÓN</span>
-                            <i class="fa-solid fa-arrow-down text-xs"></i>
-                        </a>
+                    <span class="catalog-card-symbol" aria-hidden="true">+</span>
+                    <div class="catalog-card-benefits">
+                        <strong>Beneficios clave</strong>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Optimiza la oxidación de grasas</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Acelera la recuperación muscular</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Protección antioxidante avanzada</span></li>
+                        </ul>
                     </div>
-                </div>
-
+                    <p class="catalog-card-ingredients"><strong>Fórmula destacada</strong>Superalimentos + Citrato de magnesio + Té limón</p>
+                    <h3 class="catalog-card-title">24BURN+</h3>
+                    <p class="catalog-card-tagline">Un nuevo capítulo en tu rutina.</p>
+                    <a href="#24burnplus" class="catalog-card-link" aria-label="Conocer fórmula y detalles de 24BURN+"><span>Fórmula y detalles</span><span class="catalog-card-arrow" aria-hidden="true">↗</span></a>
+                </article>
             </div>
         </div>
     </section>
 
-    <section id="renova" class="py-24 relative overflow-hidden bg-gradient-to-b from-gray-950 via-pink-950/20 to-gray-950 border-b border-pink-900/20">
+    <section id="renova" class="product-detail py-24 relative overflow-hidden bg-gradient-to-b from-gray-950 via-pink-950/20 to-gray-950 border-b border-pink-900/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Product Visual Card -->
+                <!-- Composición circular del producto -->
                 <div class="lg:col-span-5">
-                    <div class="glass-panel p-8 rounded-3xl border border-pink-500/30 product-glow-renova relative">
-                        <div class="absolute top-4 right-4 bg-pink-600/30 text-pink-300 border border-pink-500/40 px-3 py-1 rounded-full text-xs font-bold uppercase z-10">
-                            Peptan & GELITA
-                        </div>
-
-                        <div class="py-10 px-6 bg-gradient-to-t from-pink-950/90 to-gray-900/90 rounded-2xl border border-pink-500/20 text-center relative overflow-hidden flex flex-col items-center">
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-pink-500/30 rounded-full blur-3xl pointer-events-none"></div>
-                            
-                            <img src="renova1.png" alt="RENÖVA+ FWP Sabor Berries" class="max-h-64 sm:max-h-72 object-contain img-glow-renova relative z-10 my-2" />
-
-                            <span class="font-heading text-3xl font-black text-white block mb-1 z-10">RENÖVA+</span>
-                            <span class="text-xs font-semibold text-pink-400 block tracking-widest uppercase mb-4 z-10">Dosis Diaria de Juventud</span>
-                            <div class="inline-flex space-x-2 bg-pink-900/40 px-3 py-1.5 rounded-lg border border-pink-500/30 text-xs text-pink-200 font-medium z-10">
-                                <span>Doypack 315 g</span>
-                                <span>•</span>
-                                <span>15 g por porción</span>
-                            </div>
-                        </div>
+                    <div class="detail-ingredient-art mx-auto" role="img" aria-label="RENÖVA+ FWP con arándanos y avena, ingredientes principales">
+                        <img src="detail-bg-renova-hd.png" alt="" class="detail-art-bg" />
+                        <img src="renova1.png" alt="" class="detail-art-product detail-product-renova" />
                     </div>
                 </div>
 
@@ -567,19 +1218,19 @@
                     <p class="text-lg font-bold text-pink-300 mb-6">Dosis Diaria de Juventud</p>
 
                     <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 bg-gray-900/60 p-4 rounded-xl border border-gray-800">
-                        Colágeno doblemente hidrolizado con biopéptidos activos, fortalecido con Resveratrol y potenciado con Coenzima Q10. RENÖVA+ también se encuentra reforzado con Zinc y Magnesio.
+                        Fórmula avanzada de <strong>colágeno doblemente hidrolizado con biopéptidos activos</strong>, enriquecida con el poder antioxidante del <strong>resveratrol</strong> y la <strong>coenzima Q10</strong>, y complementada con <strong>zinc y magnesio</strong>. Una combinación de ingredientes diseñada para favorecer la salud de la piel, el cabello y las uñas, contribuir a la protección celular frente al estrés oxidativo y promover el bienestar integral desde el interior.
                     </p>
 
                     <!-- Lifestyle Image -->
-                    <div class="mb-6 overflow-hidden rounded-2xl border border-pink-500/20 shadow-lg aspect-video w-full bg-gray-900">
+                    <div class="scroll-reveal-media mb-6 overflow-hidden rounded-2xl border border-pink-500/20 shadow-lg aspect-video w-full bg-gray-900">
                         <img src="renova2.png" alt="Estilo de Vida RENÖVA+" class="w-full h-full object-cover rounded-2xl" />
                     </div>
 
                     <!-- Accordions -->
-                    <div class="mb-3">
+                    <div class="mb-3 benefit-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-pink-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
-                                <i class="fa-solid fa-sparkles text-pink-400 mr-2.5"></i> Beneficios Clave
+                                <i class="fa-solid fa-sparkles text-pink-400 mr-2.5"></i> Beneficios claves
                             </span>
                             <i class="fa-solid fa-chevron-down text-pink-400 transition-transform duration-300 accordion-arrow"></i>
                         </button>
@@ -605,30 +1256,37 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3 ingredient-panel pending-detail-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-pink-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
-                                <i class="fa-solid fa-flask text-pink-400 mr-2.5"></i> Ingredientes y Componentes
+                                <i class="fa-solid fa-flask text-pink-400 mr-2.5"></i> Ingredientes
                             </span>
                             <i class="fa-solid fa-chevron-down text-pink-400 transition-transform duration-300 accordion-arrow"></i>
                         </button>
-                        <div class="pt-3 px-1 accordion-content hidden">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 rounded-lg bg-pink-950/40 border border-pink-500/30 text-xs text-pink-200">Colágeno Peptan® & GELITA®</span>
-                                <span class="px-3 py-1 rounded-lg bg-pink-950/40 border border-pink-500/30 text-xs text-pink-200">Resveratrol</span>
-                                <span class="px-3 py-1 rounded-lg bg-pink-950/40 border border-pink-500/30 text-xs text-pink-200">Coenzima Q10</span>
-                                <span class="px-3 py-1 rounded-lg bg-pink-950/40 border border-pink-500/30 text-xs text-pink-200">Citrato de Magnesio</span>
-                                <span class="px-3 py-1 rounded-lg bg-pink-950/40 border border-pink-500/30 text-xs text-pink-200">Zinc</span>
-                                <span class="px-3 py-1 rounded-lg bg-pink-950/40 border border-pink-500/30 text-xs text-pink-200">Harina de Arándano</span>
-                                <span class="px-3 py-1 rounded-lg bg-pink-950/40 border border-pink-500/30 text-xs text-pink-200">Fibra de Avena</span>
-                                <span class="px-3 py-1 rounded-lg bg-pink-950/40 border border-pink-500/30 text-xs text-pink-200">Vitamina C</span>
-                                <span class="px-3 py-1 rounded-lg bg-pink-950/40 border border-pink-500/30 text-xs text-pink-200">Vitaminas del complejo B</span>
-                                <span class="px-3 py-1 rounded-lg bg-pink-950/40 border border-pink-500/30 text-xs text-pink-200">Biotina</span>
-                            </div>
+                        <div class="accordion-content hidden">
+                            <a class="ingredient-image-link" href="ingredientes-renova.png" target="_blank" rel="noopener" aria-label="Ampliar imagen de ingredientes de RENÖVA+">
+                                <img class="ingredient-diagram" src="ingredientes-renova.png" width="807" height="574" alt="Diagrama de ingredientes de RENÖVA+: magnesio, biopéptidos de colágeno, Q10, fibra de avena, arándano, inulina, niacina, vitamina C, resveratrol y zinc" loading="lazy" decoding="async" />
+                            </a>
+                            <small class="ingredient-zoom-hint">Toca la imagen para ampliarla ↗</small>
                         </div>
                     </div>
 
-                    <div class="mb-6">
+                    <div class="mb-3 nutrition-panel pending-detail-panel">
+                        <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-pink-900/40 text-left transition focus:outline-none">
+                            <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
+                                <i class="fa-solid fa-table-list text-pink-400 mr-2.5"></i> Información nutricional
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-pink-400 transition-transform duration-300 accordion-arrow"></i>
+                        </button>
+                        <div class="accordion-content hidden">
+                            <a class="nutrition-image-link" href="nutricion-renova.png" target="_blank" rel="noopener" aria-label="Ampliar tabla nutricional de RENÖVA+">
+                                <img class="nutrition-diagram" src="nutricion-renova.png" width="842" height="1442" alt="Tabla nutricional de RENÖVA+: porción de 15 g, 21 porciones por envase; incluye valores por 100 g, por porción y porcentaje de dosis diaria recomendada" loading="lazy" decoding="async" />
+                            </a>
+                            <small class="nutrition-zoom-hint">Toca la tabla para ampliarla ↗</small>
+                        </div>
+                    </div>
+
+                    <div class="mb-6 preparation-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-pink-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
                                 <i class="fa-solid fa-glass-water text-pink-400 mr-2.5"></i> Preparación
@@ -648,16 +1306,12 @@
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <span class="w-6 h-6 rounded-full bg-pink-600 text-white font-bold flex items-center justify-center shrink-0">3</span>
-                                        <span>Mezclar bien y tomar por las mañanas.</span>
+                                        <span>Mezclar bien, consumir por sorbos, se recomienda en la noche por su contenido de magnesio.</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <p class="text-[11px] text-gray-400 italic mb-6">
-                        Las mujeres embarazadas o lactantes y las personas con afecciones médicas conocidas o que toman medicamentos deben consultar a su médico antes de agregar cualquier suplemento nutricional a su dieta. Recomendado para adultos mayores de 18 años.
-                    </p>
 
                     <!-- Price & Actions Block -->
                     <div class="pt-4 border-t border-gray-800 space-y-3">
@@ -669,11 +1323,11 @@
                             <div class="flex w-full sm:w-auto items-center space-x-3">
                                 <button onclick="openBuyModal('RENÖVA+', '$49.990 CLP')" class="flex-1 sm:flex-none px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-500 hover:to-rose-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-pink-900/30 transition btn-dynamic-move">
                                     <i class="fa-solid fa-cart-shopping text-sm"></i>
-                                    <span>🛒 COMPRAR</span>
+                                    <span>COMPRAR</span>
                                 </button>
                                 <button onclick="openInfoModal('RENÖVA+', '$49.990 CLP')" class="flex-1 sm:flex-none px-5 py-3 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 border border-gray-700 transition">
                                     <i class="fa-solid fa-circle-info text-pink-400 text-sm"></i>
-                                    <span>ⓘ MÁS INFORMACIÓN</span>
+                                    <span>MÁS INFORMACIÓN</span>
                                 </button>
                             </div>
                         </div>
@@ -707,30 +1361,15 @@
         </div>
     </section>
 
-    <section id="24burn" class="py-24 relative overflow-hidden bg-gradient-to-b from-gray-950 via-lime-950/20 to-gray-950 border-b border-lime-900/20">
+    <section id="24burn" class="product-detail py-24 relative overflow-hidden bg-gradient-to-b from-gray-950 via-lime-950/20 to-gray-950 border-b border-lime-900/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Product Visual Card -->
+                <!-- Composición circular del producto -->
                 <div class="lg:col-span-5">
-                    <div class="glass-panel p-8 rounded-3xl border border-lime-500/30 product-glow-burn relative">
-                        <div class="absolute top-4 right-4 bg-lime-600/30 text-lime-300 border border-lime-500/40 px-3 py-1 rounded-full text-xs font-bold uppercase z-10">
-                            HACCP Certified
-                        </div>
-
-                        <div class="py-10 px-6 bg-gradient-to-t from-lime-950/90 to-gray-900/90 rounded-2xl border border-lime-500/20 text-center relative overflow-hidden flex flex-col items-center">
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-lime-500/30 rounded-full blur-3xl pointer-events-none"></div>
-
-                            <img src="24burn1.png" alt="24BURN FWP Sabor Té Limón" class="max-h-64 sm:max-h-72 object-contain img-glow-burn relative z-10 my-2" />
-
-                            <span class="font-heading text-3xl font-black text-white block mb-1 z-10">24BURN</span>
-                            <span class="text-xs font-semibold text-lime-400 block tracking-widest uppercase mb-4 z-10">Sabor Té Limón</span>
-                            <div class="inline-flex space-x-2 bg-lime-900/40 px-3 py-1.5 rounded-lg border border-lime-500/30 text-xs text-lime-200 font-medium z-10">
-                                <span>Cont. Neto 500g</span>
-                                <span>•</span>
-                                <span>Té Verde + Ginseng</span>
-                            </div>
-                        </div>
+                    <div class="detail-ingredient-art detail-art-burn mx-auto" role="img" aria-label="24BURN FWP con té verde y ginseng, ingredientes principales">
+                        <img src="detail-bg-24burn-hd.png" alt="" class="detail-art-bg" />
+                        <img src="24burn1.png" alt="" class="detail-art-product detail-product-burn" />
                     </div>
                 </div>
 
@@ -747,15 +1386,15 @@
                     </p>
 
                     <!-- Lifestyle Image -->
-                    <div class="mb-6 overflow-hidden rounded-2xl border border-lime-500/20 shadow-lg aspect-video w-full bg-gray-900">
+                    <div class="scroll-reveal-media mb-6 overflow-hidden rounded-2xl border border-lime-500/20 shadow-lg aspect-video w-full bg-gray-900">
                         <img src="hombre1.png" alt="Estilo de Vida 24BURN" class="w-full h-full object-cover rounded-2xl" />
                     </div>
 
                     <!-- Accordions -->
-                    <div class="mb-3">
+                    <div class="mb-3 benefit-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-lime-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
-                                <i class="fa-solid fa-bolt text-lime-400 mr-2.5"></i> Beneficios Clave
+                                <i class="fa-solid fa-bolt text-lime-400 mr-2.5"></i> Beneficios claves
                             </span>
                             <i class="fa-solid fa-chevron-down text-lime-400 transition-transform duration-300 accordion-arrow"></i>
                         </button>
@@ -789,28 +1428,37 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3 ingredient-panel pending-detail-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-lime-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
-                                <i class="fa-solid fa-flask text-lime-400 mr-2.5"></i> Ingredientes y Componentes
+                                <i class="fa-solid fa-flask text-lime-400 mr-2.5"></i> Ingredientes
                             </span>
                             <i class="fa-solid fa-chevron-down text-lime-400 transition-transform duration-300 accordion-arrow"></i>
                         </button>
-                        <div class="pt-3 px-1 accordion-content hidden">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 rounded-lg bg-lime-950/40 border border-lime-500/30 text-xs text-lime-200">Panax Ginseng</span>
-                                <span class="px-3 py-1 rounded-lg bg-lime-950/40 border border-lime-500/30 text-xs text-lime-200">Té Verde</span>
-                                <span class="px-3 py-1 rounded-lg bg-lime-950/40 border border-lime-500/30 text-xs text-lime-200">L-Carnitina</span>
-                                <span class="px-3 py-1 rounded-lg bg-lime-950/40 border border-lime-500/30 text-xs text-lime-200">Extracto de Guaraná</span>
-                                <span class="px-3 py-1 rounded-lg bg-lime-950/40 border border-lime-500/30 text-xs text-lime-200">Kelp</span>
-                                <span class="px-3 py-1 rounded-lg bg-lime-950/40 border border-lime-500/30 text-xs text-lime-200">Vitamina A</span>
-                                <span class="px-3 py-1 rounded-lg bg-lime-950/40 border border-lime-500/30 text-xs text-lime-200">Vitamina B2</span>
-                                <span class="px-3 py-1 rounded-lg bg-lime-950/40 border border-lime-500/30 text-xs text-lime-200">Vitamina B3</span>
-                            </div>
+                        <div class="accordion-content hidden">
+                            <a class="ingredient-image-link" href="ingredientes-24burn.png" target="_blank" rel="noopener" aria-label="Ampliar imagen de ingredientes de 24BURN">
+                                <img class="ingredient-diagram" src="ingredientes-24burn.png" width="784" height="581" alt="Diagrama de ingredientes de 24BURN: té verde, Panax ginseng, L-carnitina, kelp, guaraná y vitaminas A, B2 y B3" loading="lazy" decoding="async" />
+                            </a>
+                            <small class="ingredient-zoom-hint">Toca la imagen para ampliarla ↗</small>
                         </div>
                     </div>
 
-                    <div class="mb-6">
+                    <div class="mb-3 nutrition-panel pending-detail-panel">
+                        <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-lime-900/40 text-left transition focus:outline-none">
+                            <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
+                                <i class="fa-solid fa-table-list text-lime-400 mr-2.5"></i> Información nutricional
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-lime-400 transition-transform duration-300 accordion-arrow"></i>
+                        </button>
+                        <div class="accordion-content hidden">
+                            <a class="nutrition-image-link" href="nutricion-24burn.png" target="_blank" rel="noopener" aria-label="Ampliar tabla nutricional de 24BURN">
+                                <img class="nutrition-diagram" src="nutricion-24burn.png" width="842" height="1136" alt="Tabla nutricional de 24BURN: porción de 15 g, 33 porciones por envase; incluye valores por 100 g, por porción, vitaminas y componentes activos" loading="lazy" decoding="async" />
+                            </a>
+                            <small class="nutrition-zoom-hint">Toca la tabla para ampliarla ↗</small>
+                        </div>
+                    </div>
+
+                    <div class="mb-6 preparation-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-lime-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
                                 <i class="fa-solid fa-glass-water text-lime-400 mr-2.5"></i> Preparación
@@ -833,13 +1481,10 @@
                                         <span>y remueve por unos segundos.</span>
                                     </div>
                                 </div>
+                                <p class="preparation-note">No se recomienda en ayunas.</p>
                             </div>
                         </div>
                     </div>
-
-                    <p class="text-[11px] text-gray-400 italic mb-6">
-                        Las mujeres embarazadas o lactantes y las personas con afecciones médicas conocidas o que toman medicamentos deben consultar a su médico antes de agregar cualquier suplemento nutricional a su dieta. Recomendado para adultos mayores de 18 años.
-                    </p>
 
                     <!-- Price & Actions Block -->
                     <div class="pt-4 border-t border-gray-800 space-y-3">
@@ -851,11 +1496,11 @@
                             <div class="flex w-full sm:w-auto items-center space-x-3">
                                 <button onclick="openBuyModal('24BURN', '$35.990 CLP')" class="flex-1 sm:flex-none px-6 py-3 rounded-xl bg-gradient-to-r from-lime-600 to-emerald-600 hover:from-lime-500 hover:to-emerald-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-lime-900/30 transition btn-dynamic-move">
                                     <i class="fa-solid fa-cart-shopping text-sm"></i>
-                                    <span>🛒 COMPRAR</span>
+                                    <span>COMPRAR</span>
                                 </button>
                                 <button onclick="openInfoModal('24BURN', '$35.990 CLP')" class="flex-1 sm:flex-none px-5 py-3 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 border border-gray-700 transition">
                                     <i class="fa-solid fa-circle-info text-lime-400 text-sm"></i>
-                                    <span>ⓘ MÁS INFORMACIÓN</span>
+                                    <span>MÁS INFORMACIÓN</span>
                                 </button>
                             </div>
                         </div>
@@ -889,30 +1534,15 @@
         </div>
     </section>
 
-    <section id="24burnplus" class="py-24 relative overflow-hidden bg-gradient-to-b from-gray-950 via-emerald-950/20 to-gray-950 border-b border-emerald-900/20">
+    <section id="24burnplus" class="product-detail py-24 relative overflow-hidden bg-gradient-to-b from-gray-950 via-emerald-950/20 to-gray-950 border-b border-emerald-900/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Product Visual Card -->
+                <!-- Composición circular del producto -->
                 <div class="lg:col-span-5">
-                    <div class="glass-panel p-8 rounded-3xl border border-emerald-500/30 product-glow-burnplus relative">
-                        <div class="absolute top-4 right-4 bg-emerald-600/30 text-emerald-300 border border-emerald-500/40 px-3 py-1 rounded-full text-xs font-bold uppercase z-10">
-                            Sin Cafeína
-                        </div>
-
-                        <div class="py-10 px-6 bg-gradient-to-t from-emerald-950/90 to-gray-900/90 rounded-2xl border border-emerald-500/20 text-center relative overflow-hidden flex flex-col items-center">
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-emerald-500/30 rounded-full blur-3xl pointer-events-none"></div>
-
-                            <img src="24burn2.png" alt="24BURN+ FWP Sabor Té Limón" class="max-h-64 sm:max-h-72 object-contain img-glow-burnplus relative z-10 my-2" />
-
-                            <span class="font-heading text-3xl font-black text-white block mb-1 z-10">24BURN+</span>
-                            <span class="text-xs font-semibold text-emerald-400 block tracking-widest uppercase mb-4 z-10">Sabor Té Limón Premium</span>
-                            <div class="inline-flex space-x-2 bg-emerald-900/40 px-3 py-1.5 rounded-lg border border-emerald-500/30 text-xs text-emerald-200 font-medium z-10">
-                                <span>Pouch 280g</span>
-                                <span>•</span>
-                                <span>Súper Mezcla Antioxidante</span>
-                            </div>
-                        </div>
+                    <div class="detail-ingredient-art detail-art-plus mx-auto" role="img" aria-label="24BURN+ FWP con limón, magnesio y vitaminas">
+                        <img src="detail-bg-24burnplus-hd.png" alt="" class="detail-art-bg" />
+                        <img src="24burn2.png" alt="" class="detail-art-product detail-product-plus" />
                     </div>
                 </div>
 
@@ -929,15 +1559,15 @@
                     </p>
 
                     <!-- Lifestyle Image -->
-                    <div class="mb-6 overflow-hidden rounded-2xl border border-emerald-500/20 shadow-lg aspect-video w-full bg-gray-900">
+                    <div class="scroll-reveal-media mb-6 overflow-hidden rounded-2xl border border-emerald-500/20 shadow-lg aspect-video w-full bg-gray-900">
                         <img src="hombre2.png" alt="Estilo de Vida 24BURN+" class="w-full h-full object-cover rounded-2xl" />
                     </div>
 
                     <!-- Accordions -->
-                    <div class="mb-3">
+                    <div class="mb-3 benefit-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-emerald-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
-                                <i class="fa-solid fa-fire text-emerald-400 mr-2.5"></i> Beneficios Clave
+                                <i class="fa-solid fa-fire text-emerald-400 mr-2.5"></i> Beneficios claves
                             </span>
                             <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-300 accordion-arrow"></i>
                         </button>
@@ -963,32 +1593,37 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3 ingredient-panel pending-detail-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-emerald-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
-                                <i class="fa-solid fa-flask text-emerald-400 mr-2.5"></i> Ingredientes y Componentes
+                                <i class="fa-solid fa-flask text-emerald-400 mr-2.5"></i> Ingredientes
                             </span>
                             <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-300 accordion-arrow"></i>
                         </button>
-                        <div class="pt-3 px-1 accordion-content hidden">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">Mix Vitamínico</span>
-                                <span class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">Espárragos</span>
-                                <span class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">Fibra de Limón</span>
-                                <span class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">Alcachofa</span>
-                                <span class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">Limón</span>
-                                <span class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">Brócoli</span>
-                                <span class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">Panax Ginseng</span>
-                                <span class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">Manzana Madura</span>
-                                <span class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">Citrato de Magnesio (MG)</span>
-                                <span class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">Té Negro</span>
-                                <span class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">Té Rojo</span>
-                                <span class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">Té Verde</span>
-                            </div>
+                        <div class="accordion-content hidden">
+                            <a class="ingredient-image-link" href="ingredientes-24burnplus.png" target="_blank" rel="noopener" aria-label="Ampliar imagen de ingredientes de 24BURN+">
+                                <img class="ingredient-diagram" src="ingredientes-24burnplus.png" width="923" height="611" alt="Diagrama de ingredientes de 24BURN+: limón, alcachofa, fibra de limón, espárrago, mix vitamínico, tés verde, rojo y negro, citrato de magnesio, manzana madura, Panax ginseng y brócoli" loading="lazy" decoding="async" />
+                            </a>
+                            <small class="ingredient-zoom-hint">Toca la imagen para ampliarla ↗</small>
                         </div>
                     </div>
 
-                    <div class="mb-6">
+                    <div class="mb-3 nutrition-panel pending-detail-panel">
+                        <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-emerald-900/40 text-left transition focus:outline-none">
+                            <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
+                                <i class="fa-solid fa-table-list text-emerald-400 mr-2.5"></i> Información nutricional
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-300 accordion-arrow"></i>
+                        </button>
+                        <div class="accordion-content hidden">
+                            <a class="nutrition-image-link" href="nutricion-24burnplus.png" target="_blank" rel="noopener" aria-label="Ampliar tabla nutricional de 24BURN+">
+                                <img class="nutrition-diagram" src="nutricion-24burnplus.png" width="842" height="1258" alt="Tabla nutricional de 24BURN+: porción de 10 g, 28 porciones por envase; incluye valores por 100 g, por porción y porcentaje de dosis diaria recomendada" loading="lazy" decoding="async" />
+                            </a>
+                            <small class="nutrition-zoom-hint">Toca la tabla para ampliarla ↗</small>
+                        </div>
+                    </div>
+
+                    <div class="mb-6 preparation-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-emerald-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
                                 <i class="fa-solid fa-glass-water text-emerald-400 mr-2.5"></i> Preparación
@@ -1015,10 +1650,6 @@
                         </div>
                     </div>
 
-                    <p class="text-[11px] text-gray-400 italic mb-6">
-                        Las mujeres embarazadas o lactantes y las personas con afecciones médicas conocidas o que toman medicamentos deben consultar a su médico antes de agregar cualquier suplemento nutricional a su dieta. Recomendado para adultos mayores de 18 años.
-                    </p>
-
                     <!-- Price & Actions Block -->
                     <div class="pt-4 border-t border-gray-800 space-y-3">
                         <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -1029,11 +1660,11 @@
                             <div class="flex w-full sm:w-auto items-center space-x-3">
                                 <button onclick="openBuyModal('24BURN+', '$39.990 CLP')" class="flex-1 sm:flex-none px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-emerald-900/30 transition btn-dynamic-move">
                                     <i class="fa-solid fa-cart-shopping text-sm"></i>
-                                    <span>🛒 COMPRAR</span>
+                                    <span>COMPRAR</span>
                                 </button>
                                 <button onclick="openInfoModal('24BURN+', '$39.990 CLP')" class="flex-1 sm:flex-none px-5 py-3 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 border border-gray-700 transition">
                                     <i class="fa-solid fa-circle-info text-emerald-400 text-sm"></i>
-                                    <span>ⓘ MÁS INFORMACIÓN</span>
+                                    <span>MÁS INFORMACIÓN</span>
                                 </button>
                             </div>
                         </div>
@@ -1067,30 +1698,15 @@
         </div>
     </section>
 
-    <section id="eboost" class="py-24 relative overflow-hidden bg-gradient-to-b from-gray-950 via-orange-950/20 to-gray-950 border-b border-orange-900/20">
+    <section id="eboost" class="product-detail py-24 relative overflow-hidden bg-gradient-to-b from-gray-950 via-orange-950/20 to-gray-950 border-b border-orange-900/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Product Visual Card -->
+                <!-- Composición circular del producto -->
                 <div class="lg:col-span-5">
-                    <div class="glass-panel p-8 rounded-3xl border border-orange-500/30 product-glow-boost relative">
-                        <div class="absolute top-4 right-4 bg-orange-600/30 text-orange-300 border border-orange-500/40 px-3 py-1 rounded-full text-xs font-bold uppercase z-10">
-                            No Sugar Added
-                        </div>
-
-                        <div class="py-10 px-6 bg-gradient-to-t from-orange-950/90 to-gray-900/90 rounded-2xl border border-orange-500/20 text-center relative overflow-hidden flex flex-col items-center">
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-orange-500/30 rounded-full blur-3xl pointer-events-none"></div>
-
-                            <img src="eboost1.png" alt="E-BOOST FWP Sabor Mandarina" class="max-h-64 sm:max-h-72 object-contain img-glow-boost relative z-10 my-2" />
-
-                            <span class="font-heading text-3xl font-black text-white block mb-1 z-10">E⚡BOOST</span>
-                            <span class="text-xs font-semibold text-orange-400 block tracking-widest uppercase mb-4 z-10">POTENCIA, ENFOQUE Y ENERGÍA</span>
-                            <div class="inline-flex space-x-2 bg-orange-900/40 px-3 py-1.5 rounded-lg border border-orange-500/30 text-xs text-orange-200 font-medium z-10">
-                                <span>Caja 196g / 28 sachets</span>
-                                <span>•</span>
-                                <span>7g por porción</span>
-                            </div>
-                        </div>
+                    <div class="detail-ingredient-art detail-art-boost mx-auto" role="img" aria-label="E-BOOST FWP con guaraná y complejo B">
+                        <img src="detail-bg-eboost-hd.png" alt="" class="detail-art-bg" />
+                        <img src="eboost1.png" alt="" class="detail-art-product detail-product-boost" />
                     </div>
                 </div>
 
@@ -1107,15 +1723,15 @@
                     </p>
 
                     <!-- Lifestyle Image -->
-                    <div class="mb-6 overflow-hidden rounded-2xl border border-orange-500/20 shadow-lg aspect-video w-full bg-gray-900">
+                    <div class="scroll-reveal-media mb-6 overflow-hidden rounded-2xl border border-orange-500/20 shadow-lg aspect-video w-full bg-gray-900">
                         <img src="mujer1.png" alt="Estilo de Vida E-BOOST" class="w-full h-full object-cover rounded-2xl" />
                     </div>
 
                     <!-- Accordions -->
-                    <div class="mb-3">
+                    <div class="mb-3 benefit-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-orange-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
-                                <i class="fa-solid fa-bolt-lightning text-orange-400 mr-2.5"></i> Beneficios Clave
+                                <i class="fa-solid fa-bolt-lightning text-orange-400 mr-2.5"></i> Beneficios claves
                             </span>
                             <i class="fa-solid fa-chevron-down text-orange-400 transition-transform duration-300 accordion-arrow"></i>
                         </button>
@@ -1145,31 +1761,37 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3 ingredient-panel pending-detail-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-orange-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
-                                <i class="fa-solid fa-flask text-orange-400 mr-2.5"></i> Ingredientes y Componentes
+                                <i class="fa-solid fa-flask text-orange-400 mr-2.5"></i> Ingredientes
                             </span>
                             <i class="fa-solid fa-chevron-down text-orange-400 transition-transform duration-300 accordion-arrow"></i>
                         </button>
-                        <div class="pt-3 px-1 accordion-content hidden">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 rounded-lg bg-orange-950/40 border border-orange-500/30 text-xs text-orange-200">Guaraná</span>
-                                <span class="px-3 py-1 rounded-lg bg-orange-950/40 border border-orange-500/30 text-xs text-orange-200">Té Negro</span>
-                                <span class="px-3 py-1 rounded-lg bg-orange-950/40 border border-orange-500/30 text-xs text-orange-200">Té Verde (L-teanina)</span>
-                                <span class="px-3 py-1 rounded-lg bg-orange-950/40 border border-orange-500/30 text-xs text-orange-200">Yerba Mate</span>
-                                <span class="px-3 py-1 rounded-lg bg-orange-950/40 border border-orange-500/30 text-xs text-orange-200">Fibra de Bamboo</span>
-                                <span class="px-3 py-1 rounded-lg bg-orange-950/40 border border-orange-500/30 text-xs text-orange-200">Blend de Aminoácidos BCAA</span>
-                                <span class="px-3 py-1 rounded-lg bg-orange-950/40 border border-orange-500/30 text-xs text-orange-200">Algarrobo</span>
-                                <span class="px-3 py-1 rounded-lg bg-orange-950/40 border border-orange-500/30 text-xs text-orange-200">Mix Vitamínico (Vitamina A, B, C, E y D)</span>
-                                <span class="px-3 py-1 rounded-lg bg-orange-950/40 border border-orange-500/30 text-xs text-orange-200">Valina</span>
-                                <span class="px-3 py-1 rounded-lg bg-orange-950/40 border border-orange-500/30 text-xs text-orange-200">Leucina</span>
-                                <span class="px-3 py-1 rounded-lg bg-orange-950/40 border border-orange-500/30 text-xs text-orange-200">Isoleucina</span>
-                            </div>
+                        <div class="accordion-content hidden">
+                            <a class="ingredient-image-link" href="ingredientes-eboost.png" target="_blank" rel="noopener" aria-label="Ampliar imagen de ingredientes de E-BOOST">
+                                <img class="ingredient-diagram" src="ingredientes-eboost.png" width="751" height="575" alt="Diagrama de ingredientes de E-BOOST: valina, yerba mate, té negro, guaraná, fibra de bambú, algarrobo, leucina e isoleucina" loading="lazy" decoding="async" />
+                            </a>
+                            <small class="ingredient-zoom-hint">Toca la imagen para ampliarla ↗</small>
                         </div>
                     </div>
 
-                    <div class="mb-6">
+                    <div class="mb-3 nutrition-panel pending-detail-panel">
+                        <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-orange-900/40 text-left transition focus:outline-none">
+                            <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
+                                <i class="fa-solid fa-table-list text-orange-400 mr-2.5"></i> Información nutricional
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-orange-400 transition-transform duration-300 accordion-arrow"></i>
+                        </button>
+                        <div class="accordion-content hidden">
+                            <a class="nutrition-image-link" href="nutricion-eboost.png" target="_blank" rel="noopener" aria-label="Ampliar tabla nutricional de E-BOOST">
+                                <img class="nutrition-diagram" src="nutricion-eboost.png" width="842" height="1330" alt="Tabla nutricional de E-BOOST: porción de 7 g, 28 porciones por envase; incluye valores por 100 g, por porción y porcentaje de dosis diaria recomendada" loading="lazy" decoding="async" />
+                            </a>
+                            <small class="nutrition-zoom-hint">Toca la tabla para ampliarla ↗</small>
+                        </div>
+                    </div>
+
+                    <div class="mb-6 preparation-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-orange-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
                                 <i class="fa-solid fa-glass-water text-orange-400 mr-2.5"></i> Preparación
@@ -1196,10 +1818,6 @@
                         </div>
                     </div>
 
-                    <p class="text-[11px] text-gray-400 italic mb-6">
-                        Las mujeres embarazadas o lactantes y las personas con afecciones médicas conocidas o que toman medicamentos deben consultar a su médico antes de agregar cualquier suplemento nutricional a su dieta. Recomendado para adultos mayores de 18 años.
-                    </p>
-
                     <!-- Price & Actions Block -->
                     <div class="pt-4 border-t border-gray-800 space-y-3">
                         <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -1210,11 +1828,11 @@
                             <div class="flex w-full sm:w-auto items-center space-x-3">
                                 <button onclick="openBuyModal('E-BOOST', '$39.990 CLP')" class="flex-1 sm:flex-none px-6 py-3 rounded-xl bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-orange-900/30 transition btn-dynamic-move">
                                     <i class="fa-solid fa-cart-shopping text-sm"></i>
-                                    <span>🛒 COMPRAR</span>
+                                    <span>COMPRAR</span>
                                 </button>
                                 <button onclick="openInfoModal('E-BOOST', '$39.990 CLP')" class="flex-1 sm:flex-none px-5 py-3 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 border border-gray-700 transition">
                                     <i class="fa-solid fa-circle-info text-orange-400 text-sm"></i>
-                                    <span>ⓘ MÁS INFORMACIÓN</span>
+                                    <span>MÁS INFORMACIÓN</span>
                                 </button>
                             </div>
                         </div>
@@ -1248,30 +1866,15 @@
         </div>
     </section>
 
-    <section id="liv" class="py-24 relative overflow-hidden bg-gradient-to-b from-gray-950 via-cyan-950/20 to-gray-950 border-b border-cyan-900/20">
+    <section id="liv" class="product-detail py-24 relative overflow-hidden bg-gradient-to-b from-gray-950 via-cyan-950/20 to-gray-950 border-b border-cyan-900/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Product Visual Card -->
+                <!-- Composición circular del producto -->
                 <div class="lg:col-span-5">
-                    <div class="glass-panel p-8 rounded-3xl border border-cyan-500/30 product-glow-liv relative">
-                        <div class="absolute top-4 right-4 bg-cyan-600/30 text-cyan-300 border border-cyan-500/40 px-3 py-1 rounded-full text-xs font-bold uppercase z-10">
-                            Doctors Formulated
-                        </div>
-
-                        <div class="py-10 px-6 bg-gradient-to-t from-cyan-950/90 to-gray-900/90 rounded-2xl border border-cyan-500/20 text-center relative overflow-hidden flex flex-col items-center">
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-cyan-500/30 rounded-full blur-3xl pointer-events-none"></div>
-
-                            <img src="liv1.png" alt="LIV FWP Sabor Manzana Verde" class="max-h-64 sm:max-h-72 object-contain img-glow-liv relative z-10 my-2" />
-
-                            <span class="font-heading text-3xl font-black text-white block mb-1 z-10">LIV</span>
-                            <span class="text-xs font-semibold text-cyan-400 block tracking-widest uppercase mb-4 z-10">Sabor Manzana Verde</span>
-                            <div class="inline-flex space-x-2 bg-cyan-900/40 px-3 py-1.5 rounded-lg border border-cyan-500/30 text-xs text-cyan-200 font-medium z-10">
-                                <span>Pouch / Pote 280g</span>
-                                <span>•</span>
-                                <span>Fibras + Probióticos</span>
-                            </div>
-                        </div>
+                    <div class="detail-ingredient-art detail-art-liv mx-auto" role="img" aria-label="LIV FWP con bambú, papaya, fibra y probióticos">
+                        <img src="detail-bg-liv-hd.png" alt="" class="detail-art-bg" />
+                        <img src="liv1.png" alt="" class="detail-art-product detail-product-liv" />
                     </div>
                 </div>
 
@@ -1288,15 +1891,15 @@
                     </p>
 
                     <!-- Lifestyle Image -->
-                    <div class="mb-6 overflow-hidden rounded-2xl border border-cyan-500/20 shadow-lg aspect-video w-full bg-gray-900">
+                    <div class="scroll-reveal-media mb-6 overflow-hidden rounded-2xl border border-cyan-500/20 shadow-lg aspect-video w-full bg-gray-900">
                         <img src="mujer2.png" alt="Estilo de Vida LIV" class="w-full h-full object-cover rounded-2xl" />
                     </div>
 
                     <!-- Accordions -->
-                    <div class="mb-3">
+                    <div class="mb-3 benefit-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-cyan-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
-                                <i class="fa-solid fa-feather text-cyan-400 mr-2.5"></i> Beneficios Clave
+                                <i class="fa-solid fa-feather text-cyan-400 mr-2.5"></i> Beneficios claves
                             </span>
                             <i class="fa-solid fa-chevron-down text-cyan-400 transition-transform duration-300 accordion-arrow"></i>
                         </button>
@@ -1322,29 +1925,37 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3 ingredient-panel pending-detail-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-cyan-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
-                                <i class="fa-solid fa-flask text-cyan-400 mr-2.5"></i> Ingredientes y Componentes
+                                <i class="fa-solid fa-flask text-cyan-400 mr-2.5"></i> Ingredientes
                             </span>
                             <i class="fa-solid fa-chevron-down text-cyan-400 transition-transform duration-300 accordion-arrow"></i>
                         </button>
-                        <div class="pt-3 px-1 accordion-content hidden">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-xs text-cyan-200">Probióticos</span>
-                                <span class="px-3 py-1 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-xs text-cyan-200">Manzana Verde</span>
-                                <span class="px-3 py-1 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-xs text-cyan-200">Fibra de Bamboo</span>
-                                <span class="px-3 py-1 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-xs text-cyan-200">Pitahaya</span>
-                                <span class="px-3 py-1 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-xs text-cyan-200">Papaya</span>
-                                <span class="px-3 py-1 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-xs text-cyan-200">Linaza</span>
-                                <span class="px-3 py-1 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-xs text-cyan-200">Ciruela</span>
-                                <span class="px-3 py-1 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-xs text-cyan-200">Aloe Vera</span>
-                                <span class="px-3 py-1 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-xs text-cyan-200">Fructooligosacáridos (FOS)</span>
-                            </div>
+                        <div class="accordion-content hidden">
+                            <a class="ingredient-image-link" href="ingredientes-liv.png" target="_blank" rel="noopener" aria-label="Ampliar imagen de ingredientes de LIV">
+                                <img class="ingredient-diagram" src="ingredientes-liv.png" width="837" height="585" alt="Diagrama de ingredientes de LIV: fructooligosacáridos, manzana verde, fibra de bambú, pitahaya, linaza, ciruela, papaya y probióticos" loading="lazy" decoding="async" />
+                            </a>
+                            <small class="ingredient-zoom-hint">Toca la imagen para ampliarla ↗</small>
                         </div>
                     </div>
 
-                    <div class="mb-6">
+                    <div class="mb-3 nutrition-panel pending-detail-panel">
+                        <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-cyan-900/40 text-left transition focus:outline-none">
+                            <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
+                                <i class="fa-solid fa-table-list text-cyan-400 mr-2.5"></i> Información nutricional
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-cyan-400 transition-transform duration-300 accordion-arrow"></i>
+                        </button>
+                        <div class="accordion-content hidden">
+                            <a class="nutrition-image-link" href="nutricion-liv.png" target="_blank" rel="noopener" aria-label="Ampliar tabla nutricional de LIV">
+                                <img class="nutrition-diagram" src="nutricion-liv.png" width="842" height="864" alt="Tabla nutricional de LIV: porción de 10 g, 28 porciones por envase; incluye valores por 100 g, por porción y cultivos probióticos" loading="lazy" decoding="async" />
+                            </a>
+                            <small class="nutrition-zoom-hint">Toca la tabla para ampliarla ↗</small>
+                        </div>
+                    </div>
+
+                    <div class="mb-6 preparation-panel">
                         <button type="button" onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-900/80 hover:bg-gray-800 border border-cyan-900/40 text-left transition focus:outline-none">
                             <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
                                 <i class="fa-solid fa-glass-water text-cyan-400 mr-2.5"></i> Preparación
@@ -1367,13 +1978,10 @@
                                         <span>y remueve por unos segundos.</span>
                                     </div>
                                 </div>
+                                <p class="preparation-note">Se recomienda en ayunas.</p>
                             </div>
                         </div>
                     </div>
-
-                    <p class="text-[11px] text-gray-400 italic mb-6">
-                        Las mujeres embarazadas o lactantes y las personas con afecciones médicas conocidas o que toman medicamentos deben consultar a su médico antes de agregar cualquier suplemento nutricional a su dieta. Recomendado para adultos mayores de 18 años.
-                    </p>
 
                     <!-- Price & Actions Block -->
                     <div class="pt-4 border-t border-gray-800 space-y-3">
@@ -1385,11 +1993,11 @@
                             <div class="flex w-full sm:w-auto items-center space-x-3">
                                 <button onclick="openBuyModal('LIV', '$49.990 CLP')" class="flex-1 sm:flex-none px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-500 hover:to-teal-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-cyan-900/30 transition btn-dynamic-move">
                                     <i class="fa-solid fa-cart-shopping text-sm"></i>
-                                    <span>🛒 COMPRAR</span>
+                                    <span>COMPRAR</span>
                                 </button>
                                 <button onclick="openInfoModal('LIV', '$49.990 CLP')" class="flex-1 sm:flex-none px-5 py-3 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 border border-gray-700 transition">
                                     <i class="fa-solid fa-circle-info text-cyan-400 text-sm"></i>
-                                    <span>ⓘ MÁS INFORMACIÓN</span>
+                                    <span>MÁS INFORMACIÓN</span>
                                 </button>
                             </div>
                         </div>
@@ -1423,117 +2031,110 @@
         </div>
     </section>
 
-    <section id="pack-mayoristas" class="py-20 bg-gradient-to-b from-gray-950 via-amber-950/20 to-gray-900 border-t border-amber-500/30 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="text-xs font-black uppercase tracking-widest text-amber-400 bg-amber-950/80 border border-amber-600/50 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5 shadow-lg">
-                    <i class="fa-solid fa-boxes-stacked text-amber-400"></i> Oportunidad de Negocio & Consumo
-                </span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-black text-white mt-4 mb-4 tracking-tight">
-                    PACK MAYORISTAS
-                </h2>
-                <p class="text-gray-300 text-sm sm:text-base leading-relaxed bg-gray-900/70 p-5 rounded-2xl border border-amber-500/20 shadow-xl">
-                    Compra más, paga menos. Obtén de un <strong class="text-amber-400 font-extrabold">35% hasta un 50% de descuento</strong> en tus productos de FWP. Ideal para abastecerse, compartir o comenzar a generar ganancias con cada venta.
-                </p>
+    <section id="pack-mayoristas" class="pack-section py-12 sm:py-20 bg-gradient-to-br from-amber-950/80 via-gray-900 to-lime-950/70 border-y border-amber-500/30 relative overflow-hidden">
+        <div class="absolute -top-32 -right-24 w-80 h-80 rounded-full bg-orange-500/25 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-36 -left-20 w-96 h-96 rounded-full bg-lime-500/20 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="hero-title pack-title mb-5 text-center">Pack mayoristas: compra más, paga menos.</h2>
+            <p class="pack-description text-[#385647] text-base sm:text-lg leading-relaxed mb-7 sm:mb-10 max-w-3xl mx-auto text-left sm:text-center">
+                Obtén un <strong class="text-[#8E1D5A] font-extrabold">35% hasta un 50% de descuento</strong> en tus productos de FWP, ideal para abastecerse, compartir o comenzar a generar ganancias con cada venta. <strong>Desde 8 unidades.</strong>
+            </p>
+
+            <div class="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-7 lg:gap-12 items-start">
+                <div>
+                    <img src="pack-mayorista.jpeg" width="900" height="1410" alt="Arma tu pack ideal y ahorra más: productos FWP y descuentos mayoristas" class="pack-image scroll-reveal-media block w-full max-w-xl mx-auto h-auto rounded-3xl shadow-xl shadow-[#203B2E]/15" decoding="async">
+                </div>
+
+                <div class="bg-[#FFFDF6] border border-[#D0D6C4] rounded-3xl p-5 sm:p-8 shadow-xl shadow-[#203B2E]/10">
+                    <h3 class="font-heading text-2xl sm:text-3xl font-black text-[#203B2E] mb-6">¿Cómo funciona?</h3>
+
+                    <ol class="space-y-3 sm:space-y-4">
+                        <li class="flex gap-4 items-start rounded-2xl bg-[#F7F5EC] border border-[#D0D6C4] p-4">
+                            <span class="w-9 h-9 shrink-0 rounded-full bg-pink-500 text-[#4D263B] font-black flex items-center justify-center">1</span>
+                            <div class="min-w-0 flex-1">
+                                <p class="text-sm sm:text-base text-[#385647] pt-1.5">Ingresa al enlace de compra.</p>
+                                <a href="https://portal.worldgen.vip/ROSSIEFARIAS" target="_blank" rel="noopener noreferrer" class="pack-link mt-4 w-full min-h-14 px-4 py-3 rounded-2xl bg-[#B70E61] hover:bg-[#94104F] text-white font-black text-sm sm:text-base flex items-center justify-center gap-2 text-center shadow-lg shadow-[#B70E61]/25" aria-label="Abrir enlace de compra para armar mi pack mayorista">
+                                    <span>Ir al enlace de compra</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 items-start rounded-2xl bg-[#F7F5EC] border border-[#D0D6C4] p-4">
+                            <span class="w-9 h-9 shrink-0 rounded-full bg-pink-500 text-[#4D263B] font-black flex items-center justify-center">2</span>
+                            <p class="text-sm sm:text-base text-[#385647] pt-1.5">Selecciona la opción <strong>FWP</strong> y elige tu país.</p>
+                        </li>
+                        <li class="flex gap-4 items-start rounded-2xl bg-[#F7F5EC] border border-[#D0D6C4] p-4">
+                            <span class="w-9 h-9 shrink-0 rounded-full bg-pink-500 text-[#4D263B] font-black flex items-center justify-center">3</span>
+                            <p class="text-sm sm:text-base text-[#385647] pt-1.5">Selecciona <strong>productos</strong>.</p>
+                        </li>
+                        <li class="flex gap-4 items-start rounded-2xl bg-[#F7F5EC] border border-[#D0D6C4] p-4">
+                            <span class="w-9 h-9 shrink-0 rounded-full bg-pink-500 text-[#4D263B] font-black flex items-center justify-center">4</span>
+                            <p class="text-sm sm:text-base text-[#385647] pt-1.5">Completa un mínimo de <strong>8 unidades</strong> para acceder al beneficio mayorista.</p>
+                        </li>
+                    </ol>
+
+                    <p class="mt-6 text-center text-base sm:text-lg leading-relaxed font-bold text-[#33411B]">
+                        ✨ ¡Así de fácil! Tú eliges los productos y armas tu pack según tus necesidades.
+                    </p>
+                    <a href="https://wa.me/56996923156?text=Hola%20Rossie%2C%20quiero%20armar%20un%20pack%20mayorista%20y%20necesito%20asesor%C3%ADa%20para%20elegir%20los%20productos." target="_blank" rel="noopener noreferrer" class="pack-advice-link mt-6 mx-auto px-5 py-4 rounded-2xl border-2 border-[#7A354F] text-[#4D263B] bg-[#FCEAF2] font-bold text-sm sm:text-base flex items-center justify-center gap-3 text-center max-w-md" aria-label="Pedir asesoría por WhatsApp para elegir productos del pack mayorista">
+                        <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
+                        <span>¿No sabes qué elegir? Te asesoro</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="emprende" class="venture-section py-14 sm:py-20 border-b border-[#D0D6C4] scroll-mt-28">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="hero-title pack-title text-center mb-5">Emprende con FWP</h2>
+            <p class="text-[#385647] text-base sm:text-xl leading-relaxed text-center max-w-3xl mx-auto mb-9 sm:mb-12">
+                Una oportunidad real para generar ingresos extra, desde tu celular, a tu ritmo, sin dejar lo que ya tienes.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 lg:gap-7 mb-14 sm:mb-20">
+                <article class="venture-card">
+                    <img class="venture-photo" src="emprende-celular-rva-hd.png" width="1122" height="1402" alt="Mujer usando su celular junto a una bebida y el sachet RVA+ original" loading="lazy" decoding="async">
+                    <div class="p-5 sm:p-4 lg:p-5">
+                        <h3 class="font-heading text-lg font-extrabold text-[#203B2E] leading-tight mb-2">Puedes hacerlo desde tu celular</h3>
+                        <p class="text-sm sm:text-base text-[#52684C] leading-relaxed">Sin oficina, sin horarios fijos, donde tú quieras.</p>
+                    </div>
+                </article>
+                <article class="venture-card">
+                    <img class="venture-photo" src="emprende-ingreso-rva-hd.png" width="1122" height="1402" alt="Preparación de una bebida con el sachet RVA+ original" loading="lazy" decoding="async">
+                    <div class="p-5 sm:p-4 lg:p-5">
+                        <h3 class="font-heading text-lg font-extrabold text-[#203B2E] leading-tight mb-2">Te gustaría generar un ingreso extra</h3>
+                        <p class="text-sm sm:text-base text-[#52684C] leading-relaxed">Para tus metas, tus cuentas o simplemente darte más tranquilidad.</p>
+                    </div>
+                </article>
+                <article class="venture-card">
+                    <img class="venture-photo" src="emprende-tiempo-hd.png" width="1122" height="1402" alt="Madre e hija compartiendo tiempo frente a un computador" loading="lazy" decoding="async">
+                    <div class="p-5 sm:p-4 lg:p-5">
+                        <h3 class="font-heading text-lg font-extrabold text-[#203B2E] leading-tight mb-2">Quieres más tiempo para lo que importa</h3>
+                        <p class="text-sm sm:text-base text-[#52684C] leading-relaxed">Tu familia, tus proyectos y tu bienestar.</p>
+                    </div>
+                </article>
             </div>
 
-            <!-- 6 Wholesale Product Cards Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="font-heading text-2xl sm:text-4xl font-extrabold text-[#713D79] leading-tight mb-4">Antes de comenzar, descubre esta oportunidad.</h3>
+                <p class="text-base sm:text-lg font-semibold text-[#385647] leading-relaxed max-w-3xl mx-auto mb-7">
+                    Dedica 15 minutos para revisar la información (video). Conoce cómo funciona este modelo de negocio, qué productos puedes recomendar y por qué podría ser una oportunidad para ti.
+                </p>
+                <div class="venture-video">
+                    <iframe src="https://www.youtube-nocookie.com/embed/yOTKL4yw4jM?start=139&rel=0" title="Video: descubre la oportunidad de emprender con FWP" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="mt-3 text-sm text-[#52684C]"><a href="https://www.youtube.com/watch?v=yOTKL4yw4jM&t=139s" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-[#7A354F]">Ver el video en YouTube</a></p>
 
-                <!-- 1. RENÖVA+ -->
-                <button type="button" onclick="openWholesaleModal('renova')" class="glass-card rounded-2xl p-4 border border-pink-500/40 hover:border-pink-400 hover:bg-pink-950/30 transition-all duration-300 text-center flex flex-col justify-between group shadow-lg focus:outline-none">
-                    <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-pink-400 bg-pink-950/70 border border-pink-500/30 px-2 py-0.5 rounded-full block mb-2">Hasta 50% OFF</span>
-                        <div class="h-28 flex items-center justify-center my-2">
-                            <img src="renova1.png" alt="Pack Mayorista RENÖVA+" class="max-h-24 max-w-full object-contain img-glow-renova group-hover:scale-110 transition-transform duration-300" />
-                        </div>
-                        <h3 class="font-heading text-base font-black text-white group-hover:text-pink-300 transition-colors">RENÖVA+</h3>
-                    </div>
-                    <span class="mt-3 w-full py-2 rounded-xl bg-pink-600/80 hover:bg-pink-500 text-white font-bold text-[11px] uppercase tracking-wider flex items-center justify-center space-x-1 shadow-md">
-                        <span>Ver Packs</span>
-                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </span>
-                </button>
-
-                <!-- 2. 24BURN -->
-                <button type="button" onclick="openWholesaleModal('24burn')" class="glass-card rounded-2xl p-4 border border-lime-500/40 hover:border-lime-400 hover:bg-lime-950/30 transition-all duration-300 text-center flex flex-col justify-between group shadow-lg focus:outline-none">
-                    <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-lime-400 bg-lime-950/70 border border-lime-500/30 px-2 py-0.5 rounded-full block mb-2">Hasta 50% OFF</span>
-                        <div class="h-28 flex items-center justify-center my-2">
-                            <img src="24burn1.png" alt="Pack Mayorista 24BURN" class="max-h-24 max-w-full object-contain img-glow-burn group-hover:scale-110 transition-transform duration-300" />
-                        </div>
-                        <h3 class="font-heading text-base font-black text-white group-hover:text-lime-300 transition-colors">24BURN</h3>
-                    </div>
-                    <span class="mt-3 w-full py-2 rounded-xl bg-lime-600/80 hover:bg-lime-500 text-white font-bold text-[11px] uppercase tracking-wider flex items-center justify-center space-x-1 shadow-md">
-                        <span>Ver Packs</span>
-                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </span>
-                </button>
-
-                <!-- 3. 24BURN+ -->
-                <button type="button" onclick="openWholesaleModal('24burnplus')" class="glass-card rounded-2xl p-4 border border-emerald-500/40 hover:border-emerald-400 hover:bg-emerald-950/30 transition-all duration-300 text-center flex flex-col justify-between group shadow-lg focus:outline-none">
-                    <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/70 border border-emerald-500/30 px-2 py-0.5 rounded-full block mb-2">Hasta 50% OFF</span>
-                        <div class="h-28 flex items-center justify-center my-2">
-                            <img src="24burn2.png" alt="Pack Mayorista 24BURN+" class="max-h-24 max-w-full object-contain img-glow-burnplus group-hover:scale-110 transition-transform duration-300" />
-                        </div>
-                        <h3 class="font-heading text-base font-black text-white group-hover:text-emerald-300 transition-colors">24BURN+</h3>
-                    </div>
-                    <span class="mt-3 w-full py-2 rounded-xl bg-emerald-600/80 hover:bg-emerald-500 text-white font-bold text-[11px] uppercase tracking-wider flex items-center justify-center space-x-1 shadow-md">
-                        <span>Ver Packs</span>
-                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </span>
-                </button>
-
-                <!-- 4. E-BOOST -->
-                <button type="button" onclick="openWholesaleModal('eboost')" class="glass-card rounded-2xl p-4 border border-orange-500/40 hover:border-orange-400 hover:bg-orange-950/30 transition-all duration-300 text-center flex flex-col justify-between group shadow-lg focus:outline-none">
-                    <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-orange-400 bg-orange-950/70 border border-orange-500/30 px-2 py-0.5 rounded-full block mb-2">Hasta 50% OFF</span>
-                        <div class="h-28 flex items-center justify-center my-2">
-                            <img src="eboost1.png" alt="Pack Mayorista E-BOOST" class="max-h-24 max-w-full object-contain img-glow-boost group-hover:scale-110 transition-transform duration-300" />
-                        </div>
-                        <h3 class="font-heading text-base font-black text-white group-hover:text-orange-300 transition-colors">E⚡BOOST</h3>
-                    </div>
-                    <span class="mt-3 w-full py-2 rounded-xl bg-orange-600/80 hover:bg-orange-500 text-white font-bold text-[11px] uppercase tracking-wider flex items-center justify-center space-x-1 shadow-md">
-                        <span>Ver Packs</span>
-                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </span>
-                </button>
-
-                <!-- 5. LIV -->
-                <button type="button" onclick="openWholesaleModal('liv')" class="glass-card rounded-2xl p-4 border border-cyan-500/40 hover:border-cyan-400 hover:bg-cyan-950/30 transition-all duration-300 text-center flex flex-col justify-between group shadow-lg focus:outline-none">
-                    <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950/70 border border-cyan-500/30 px-2 py-0.5 rounded-full block mb-2">Hasta 50% OFF</span>
-                        <div class="h-28 flex items-center justify-center my-2">
-                            <img src="liv1.png" alt="Pack Mayorista LIV" class="max-h-24 max-w-full object-contain img-glow-liv group-hover:scale-110 transition-transform duration-300" />
-                        </div>
-                        <h3 class="font-heading text-base font-black text-white group-hover:text-cyan-300 transition-colors">LIV</h3>
-                    </div>
-                    <span class="mt-3 w-full py-2 rounded-xl bg-cyan-600/80 hover:bg-cyan-500 text-white font-bold text-[11px] uppercase tracking-wider flex items-center justify-center space-x-1 shadow-md">
-                        <span>Ver Packs</span>
-                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </span>
-                </button>
-
-                <!-- 6. MIXTO -->
-                <button type="button" onclick="openWholesaleModal('mixto')" class="glass-card rounded-2xl p-4 border border-purple-500/40 hover:border-purple-400 hover:bg-purple-950/30 transition-all duration-300 text-center flex flex-col justify-between group shadow-lg focus:outline-none">
-                    <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-purple-300 bg-purple-950/70 border border-purple-500/30 px-2 py-0.5 rounded-full block mb-2">Ignition Packs</span>
-                        <div class="h-28 flex items-center justify-center my-2">
-                            <div class="relative w-full h-full flex items-center justify-center space-x-1">
-                                <img src="24burn1.png" alt="Ignition Pack" class="max-h-20 object-contain -mr-4 z-10 filter drop-shadow-md group-hover:scale-105 transition-transform" />
-                                <img src="renova1.png" alt="Ignition Pack" class="max-h-24 object-contain z-20 filter drop-shadow-lg group-hover:scale-110 transition-transform" />
-                            </div>
-                        </div>
-                        <h3 class="font-heading text-base font-black text-white group-hover:text-purple-300 transition-colors">MIXTO</h3>
-                    </div>
-                    <span class="mt-3 w-full py-2 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold text-[11px] uppercase tracking-wider flex items-center justify-center space-x-1 shadow-md">
-                        <span>Ver 3 Packs</span>
-                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </span>
-                </button>
-
+                <h3 class="font-heading text-2xl sm:text-3xl font-extrabold text-[#203B2E] mt-12 mb-4">¿Ya viste el video? Ahora viene lo mejor.</h3>
+                <p class="text-base sm:text-lg font-semibold text-[#385647] leading-relaxed max-w-3xl mx-auto mb-7">
+                    No tienes que descubrir cómo empezar por tu cuenta. Te acompañamos para que conozcas los pasos, resuelvas tus dudas y decidas si esta oportunidad es para ti.
+                </p>
+                <a href="https://wa.me/56996923156?text=Hola%20Rossie%2C%20ya%20vi%20el%20video%20de%20Emprende%20con%20FWP%20y%20quiero%20saber%20m%C3%A1s%20detalles." target="_blank" rel="noopener noreferrer" class="venture-cta inline-flex items-center justify-center gap-3 min-h-14 px-6 py-4 rounded-2xl bg-[#B70E61] hover:bg-[#94104F] font-black text-sm sm:text-base text-center shadow-lg shadow-[#B70E61]/25 transition-colors">
+                    <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
+                    <span>YA VI EL VIDEO, QUIERO SABER MÁS DETALLES</span>
+                </a>
             </div>
         </div>
     </section>
@@ -1574,7 +2175,7 @@
         </div>
     </section>
 
-    <section class="py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-black text-center relative overflow-hidden">
+    <section class="py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-[#F7F5EC] text-center relative overflow-hidden">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <span class="text-xs font-black uppercase tracking-widest text-pink-400 bg-pink-950/80 border border-pink-800/60 px-3 py-1 rounded-full">
                 Empieza Tu Cambio Hoy
@@ -1606,17 +2207,17 @@
                         Rossie Farías — Distribuidora Oficial FWP en Chile. Productos de alta calidad orientados al bienestar y la nutrición avanzada.
                     </p>
                     <div class="flex items-center space-x-3">
-                        <a href="https://wa.me/56996923156" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-gray-900 hover:bg-emerald-600 text-gray-300 hover:text-white flex items-center justify-center transition border border-gray-800" title="WhatsApp (+56 9 9692 3156)">
-                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <a href="https://wa.me/56996923156" target="_blank" rel="noopener" class="footer-social footer-social-whatsapp flex items-center justify-center" title="WhatsApp (+56 9 9692 3156)" aria-label="WhatsApp (+56 9 9692 3156)">
+                            <i class="fa-brands fa-whatsapp"></i>
                         </a>
-                        <a href="https://www.instagram.com/rossiefarias/" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-gray-900 hover:bg-pink-600 text-gray-300 hover:text-white flex items-center justify-center transition border border-gray-800" title="Instagram @rossiefarias">
-                            <i class="fa-brands fa-instagram text-sm"></i>
+                        <a href="https://www.instagram.com/rossiefarias/" target="_blank" rel="noopener" class="footer-social footer-social-instagram flex items-center justify-center" title="Instagram @rossiefarias" aria-label="Instagram @rossiefarias">
+                            <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="https://www.instagram.com/bienestarcon_rossie/" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-gray-900 hover:bg-pink-600 text-gray-300 hover:text-white flex items-center justify-center transition border border-gray-800" title="Instagram @bienestarcon_rossie">
-                            <i class="fa-brands fa-instagram text-sm"></i>
+                        <a href="https://www.instagram.com/bienestarcon_rossie/" target="_blank" rel="noopener" class="footer-social footer-social-instagram flex items-center justify-center" title="Instagram @bienestarcon_rossie" aria-label="Instagram @bienestarcon_rossie">
+                            <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="https://www.tiktok/@rossie_bienestar?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-gray-900 hover:bg-rose-600 text-gray-300 hover:text-white flex items-center justify-center transition border border-gray-800" title="TikTok @rossie_bienestar">
-                            <i class="fa-brands fa-tiktok text-sm"></i>
+                        <a href="https://www.tiktok.com/@rossie_bienestar" target="_blank" rel="noopener" class="footer-social footer-social-tiktok flex items-center justify-center" title="TikTok @rossie_bienestar" aria-label="TikTok @rossie_bienestar">
+                            <i class="fa-brands fa-tiktok"></i>
                         </a>
                     </div>
                 </div>
@@ -1625,12 +2226,13 @@
                 <div>
                     <h5 class="text-white font-bold uppercase tracking-wider mb-3">Línea de Productos</h5>
                     <ul class="space-y-2">
-                        <li><a href="#renova" class="hover:text-pink-400 transition">RENÖVA+ — $49.990 CLP</a></li>
-                        <li><a href="#24burn" class="hover:text-lime-400 transition">24BURN — $35.990 CLP</a></li>
-                        <li><a href="#24burnplus" class="hover:text-emerald-400 transition">24BURN+ — $39.990 CLP</a></li>
-                        <li><a href="#eboost" class="hover:text-orange-400 transition">E-BOOST — $39.990 CLP</a></li>
-                        <li><a href="#liv" class="hover:text-cyan-400 transition">LIV — $49.990 CLP</a></li>
+                        <li><a href="#renova" class="hover:text-pink-400 transition">RENÖVA+</a></li>
+                        <li><a href="#24burn" class="hover:text-lime-400 transition">24BURN</a></li>
+                        <li><a href="#24burnplus" class="hover:text-emerald-400 transition">24BURN+</a></li>
+                        <li><a href="#eboost" class="hover:text-orange-400 transition">E-BOOST</a></li>
+                        <li><a href="#liv" class="hover:text-cyan-400 transition">LIV</a></li>
                         <li><a href="#pack-mayoristas" class="hover:text-amber-400 transition">PACK MAYORISTAS</a></li>
+                        <li><a href="#emprende" class="hover:text-pink-400 transition">EMPRENDE CON FWP</a></li>
                     </ul>
                 </div>
 
@@ -1653,7 +2255,7 @@
         </div>
     </footer>
 
-    <div id="buy-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div id="buy-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-[#203B2E]/78 backdrop-blur-sm p-4">
         <div class="glass-panel max-w-md w-full p-6 rounded-3xl border border-gray-700 shadow-2xl relative">
             <button onclick="closeBuyModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2">
                 <i class="fa-solid fa-xmark text-lg"></i>
@@ -1697,7 +2299,7 @@
         </div>
     </div>
 
-    <div id="info-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div id="info-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-[#203B2E]/78 backdrop-blur-sm p-4">
         <div class="glass-panel max-w-lg w-full p-6 sm:p-8 rounded-3xl border border-gray-700 shadow-2xl relative max-h-[90vh] overflow-y-auto">
             <button onclick="closeInfoModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2">
                 <i class="fa-solid fa-xmark text-lg"></i>
@@ -1715,7 +2317,7 @@
                     <textarea id="info-modal-question" rows="4" placeholder="Ej: Hola Rossie, ¿este producto tiene alguna contraindicación si padezco hipertensión? / ¿Cómo me recomiendas tomarlo según mis metas?" class="w-full bg-gray-900 border border-gray-700 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-pink-500 transition resize-none"></textarea>
                 </div>
 
-                <div class="p-3 bg-pink-950/30 border border-pink-900/40 rounded-xl text-pink-200 text-[11px] flex items-center space-x-2">
+                <div class="info-whatsapp-note p-3 rounded-xl flex items-center space-x-2">
                     <i class="fa-brands fa-whatsapp text-pink-400 text-base shrink-0"></i>
                     <span>Te conectaremos directamente con Rossie Farías por WhatsApp para resolver tus dudas de forma personalizada.</span>
                 </div>
@@ -1726,36 +2328,8 @@
                     <i class="fa-brands fa-whatsapp text-base"></i>
                     <span>Enviar Mensaje</span>
                 </button>
-                <button onclick="closeInfoModal()" class="px-5 py-3 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-300 font-medium text-xs transition">
+                <button onclick="closeInfoModal()" class="info-cancel px-5 py-3 rounded-xl font-medium text-xs transition">
                     Cancelar
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div id="wholesaler-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-md p-3 sm:p-6 overflow-y-auto">
-        <div class="glass-panel max-w-2xl w-full p-4 sm:p-8 rounded-3xl border border-amber-500/40 shadow-2xl relative my-auto max-h-[92vh] overflow-y-auto">
-            <button onclick="closeWholesaleModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2 rounded-full bg-gray-800/80 hover:bg-gray-700 transition z-20">
-                <i class="fa-solid fa-xmark text-lg"></i>
-            </button>
-
-            <div class="text-center mb-6">
-                <span class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-950/80 border border-amber-500/40 text-amber-300 text-xs font-bold uppercase mb-2">
-                    <i class="fa-solid fa-tags text-amber-400"></i>
-                    <span>Precios Especiales de Distribución</span>
-                </span>
-                <h3 id="wholesale-modal-title" class="font-heading text-2xl sm:text-3xl font-black text-white">Pack Mayorista</h3>
-                <p id="wholesale-modal-subtitle" class="text-xs sm:text-sm text-gray-300 mt-1">Obtén entre un 35% y un 50% de descuento directo en tus compras</p>
-            </div>
-
-            <!-- Dynamic Image Container -->
-            <div id="wholesale-modal-images" class="space-y-6 mb-6">
-                <!-- Injected via JavaScript -->
-            </div>
-
-            <div class="pt-4 border-t border-gray-800 text-center">
-                <button onclick="closeWholesaleModal()" class="px-6 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold text-xs uppercase tracking-wider transition">
-                    Cerrar Ventana
                 </button>
             </div>
         </div>
@@ -1764,7 +2338,7 @@
     <script>
         const benefitsData = [
             { icon: 'fa-truck-fast', text: 'Envío gratis a TODO CHILE' },
-            { icon: 'fa-clipboard-list', text: 'Plan Nutricional Personalizado' },
+            { icon: 'fa-clipboard-list', text: 'Plan de uso personalizado' },
             { icon: 'fa-user-doctor', text: 'Acompañamiento y Asesoría' },
             { icon: 'fa-box-open', text: 'Regalos FWP' }
         ];
@@ -1821,6 +2395,22 @@
             }
         }
 
+        // Show photography as it enters the viewport.
+        const revealTargets = document.querySelectorAll('#emprende .venture-card, .scroll-reveal-media');
+        if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('reveal-visible');
+                    observer.unobserve(entry.target);
+                });
+            }, { threshold: .12, rootMargin: '0px 0px -35px 0px' });
+            revealTargets.forEach(target => {
+                target.classList.add('reveal-pending');
+                revealObserver.observe(target);
+            });
+        }
+
         // Mobile drawer toggle logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -1829,14 +2419,28 @@
         if (mobileMenuBtn && mobileMenu) {
             mobileMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
             });
 
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    mobileMenu.querySelectorAll('.products-menu').forEach(menu => { menu.open = false; });
                 });
             });
         }
+        document.querySelectorAll('.desktop-products-menu .products-submenu a').forEach(link => {
+            link.addEventListener('click', () => { link.closest('details').open = false; });
+        });
+        document.addEventListener('click', event => {
+            document.querySelectorAll('.desktop-products-menu[open]').forEach(menu => {
+                if (!menu.contains(event.target)) menu.open = false;
+            });
+        });
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') document.querySelectorAll('.products-menu[open]').forEach(menu => { menu.open = false; });
+        });
 
         // Modal Purchase Logic
         let currentModalProduct = '';
@@ -1899,91 +2503,6 @@
             closeInfoModal();
         }
 
-        const wholesalePacksData = {
-            'renova': {
-                title: 'Pack Mayorista RENÖVA+',
-                subtitle: 'Descuentos del 35%, 40% y 50% en RENÖVA+ (Dosis Diaria de Juventud)',
-                images: [
-                    { img: '2.2.png', tag: 'Packs RENÖVA+', prodName: 'RENOVA' }
-                ]
-            },
-            '24burn': {
-                title: 'Pack Mayorista 24BURN',
-                subtitle: 'Descuentos del 35%, 40% y 50% en 24BURN Sabor Té Limón',
-                images: [
-                    { img: '2.3.png', tag: 'Packs 24BURN', prodName: '24BURN' }
-                ]
-            },
-            '24burnplus': {
-                title: 'Pack Mayorista 24BURN+',
-                subtitle: 'Descuentos del 35%, 40% y 50% en 24BURN+ Sin Cafeína',
-                images: [
-                    { img: '2.4.png', tag: 'Packs 24BURN+', prodName: '24BURN+' }
-                ]
-            },
-            'eboost': {
-                title: 'Pack Mayorista E⚡BOOST',
-                subtitle: 'Descuentos del 35%, 40% y 50% en E-BOOST Potencia y Energía',
-                images: [
-                    { img: '2.5.png', tag: 'Packs E-BOOST', prodName: 'EBOOST' }
-                ]
-            },
-            'liv': {
-                title: 'Pack Mayorista LIV',
-                subtitle: 'Descuentos del 35%, 40% y 50% en LIV Detox & Fibra',
-                images: [
-                    { img: '2.6.png', tag: 'Packs LIV', prodName: 'LIV' }
-                ]
-            },
-            'mixto': {
-                title: 'Ignition Packs Mayoristas (MIXTO)',
-                subtitle: 'Combina tus productos favoritos de la línea FWP con descuentos del 35% al 50%',
-                images: [
-                    { img: '2.7.png', tag: 'Pack Mixto 1: 24BURN + RENÖVA+', prodName: 'Mixto 24BURN y RENOVA' },
-                    { img: '2.8.png', tag: 'Pack Mixto 2: 24BURN + E-BOOST + RENÖVA+', prodName: 'Mixto 24BURN, EBOOST y RENOVA' },
-                    { img: '2.9.png', tag: 'Pack Mixto 3: 24BURN + E-BOOST + RENÖVA+ + LIV', prodName: 'Mixto Línea Completa' }
-                ]
-            }
-        };
-
-        function openWholesaleModal(packKey) {
-            const data = wholesalePacksData[packKey];
-            if (!data) return;
-
-            document.getElementById('wholesale-modal-title').textContent = data.title;
-            document.getElementById('wholesale-modal-subtitle').textContent = data.subtitle;
-
-            const container = document.getElementById('wholesale-modal-images');
-            container.innerHTML = '';
-
-            data.images.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'bg-gray-900/90 rounded-2xl p-3 border border-amber-500/30 shadow-xl text-center space-y-3';
-                
-                const waMessage = encodeURIComponent(`Quisiera más información sobre los pack mayoristas de ${item.prodName}.`);
-                const waUrl = `https://wa.me/56996923156?text=${waMessage}`;
-
-                card.innerHTML = `
-                    <div class="relative rounded-xl overflow-hidden bg-black/60 border border-gray-800">
-                        <img src="${item.img}" alt="${item.tag}" class="w-full h-auto object-contain rounded-xl" />
-                    </div>
-                    <div class="pt-1 flex flex-col sm:flex-row items-center justify-between gap-2">
-                        <span class="text-xs font-bold text-amber-300 uppercase tracking-wider">${item.tag}</span>
-                        <a href="${waUrl}" target="_blank" rel="noopener" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition shadow-md shadow-emerald-900/30 btn-dynamic-move">
-                            <i class="fa-brands fa-whatsapp text-sm"></i>
-                            <span>MÁS INFORMACIÓN</span>
-                        </a>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-
-            document.getElementById('wholesaler-modal').classList.add('modal-active');
-        }
-
-        function closeWholesaleModal() {
-            document.getElementById('wholesaler-modal').classList.remove('modal-active');
-        }
     </script>
 </body>
 </html>
